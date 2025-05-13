@@ -7,15 +7,24 @@ public class MageAnimations : MonoBehaviour
     private Animator animator;
 
     // Animation direction states
-    private const string ANIM_UP = "WALK_TOP";
+    /*private const string ANIM_UP = "WALK_TOP";
     private const string ANIM_UP_RIGHT = "WALK_TOP_RIGHT";
     private const string ANIM_RIGHT = "WALK_RIGHT";
     private const string ANIM_DOWN_RIGHT = "WALK_DOWN_RIGHT";
     private const string ANIM_DOWN = "WALK_DOWN";
     private const string ANIM_DOWN_LEFT = "WALK_DOWN_LEFT";
     private const string ANIM_LEFT = "WALK_LEFT";
-    private const string ANIM_UP_LEFT = "WALK_TOP_LEFT";
+    private const string ANIM_UP_LEFT = "WALK_TOP_LEFT";*/
 
+
+    private const string ANIM_UP = "IDDLE_TOP";
+    private const string ANIM_UP_RIGHT = "IDDLE_TOP_RIGHT";
+    private const string ANIM_RIGHT = "IDDLE_RIGHT";
+    private const string ANIM_DOWN_RIGHT = "IDDLE_DOWN_RIGHT";
+    private const string ANIM_DOWN = "IDDLE_DOWN";
+    private const string ANIM_DOWN_LEFT = "IDDLE_DOWN_LEFT";
+    private const string ANIM_LEFT = "IDDLE_LEFT";
+    private const string ANIM_UP_LEFT = "IDDLE_TOP_LEFT";
     // Current direction
     private string currentDirection = ANIM_DOWN;
 
