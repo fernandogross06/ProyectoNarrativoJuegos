@@ -7,16 +7,16 @@ public class MageAnimations : MonoBehaviour
     private Animator animator;
 
     // Animation direction states
-    /*private const string ANIM_UP = "WALK_TOP";
+    private const string ANIM_UP = "WALK_TOP";
     private const string ANIM_UP_RIGHT = "WALK_TOP_RIGHT";
     private const string ANIM_RIGHT = "WALK_RIGHT";
     private const string ANIM_DOWN_RIGHT = "WALK_DOWN_RIGHT";
     private const string ANIM_DOWN = "WALK_DOWN";
     private const string ANIM_DOWN_LEFT = "WALK_DOWN_LEFT";
     private const string ANIM_LEFT = "WALK_LEFT";
-    private const string ANIM_UP_LEFT = "WALK_TOP_LEFT";*/
+    private const string ANIM_UP_LEFT = "WALK_TOP_LEFT";
 
-
+    /*
     private const string ANIM_UP = "IDDLE_TOP";
     private const string ANIM_UP_RIGHT = "IDDLE_TOP_RIGHT";
     private const string ANIM_RIGHT = "IDDLE_RIGHT";
@@ -24,7 +24,7 @@ public class MageAnimations : MonoBehaviour
     private const string ANIM_DOWN = "IDDLE_DOWN";
     private const string ANIM_DOWN_LEFT = "IDDLE_DOWN_LEFT";
     private const string ANIM_LEFT = "IDDLE_LEFT";
-    private const string ANIM_UP_LEFT = "IDDLE_TOP_LEFT";
+    private const string ANIM_UP_LEFT = "IDDLE_TOP_LEFT";*/
     // Current direction
     private string currentDirection = ANIM_DOWN;
 
@@ -33,6 +33,8 @@ public class MageAnimations : MonoBehaviour
     // Are we moving?
     private bool isMoving = false;
 
+
+    public GameObject firePoint;
     private void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -50,9 +52,16 @@ public class MageAnimations : MonoBehaviour
 
         // Determine the appropriate animation based on angle
         UpdateDirectionAnimation(direction);
-
+        RotateFirePoint(direction);
         // Handle movement (optional)
         HandleMovement(direction);
+    }
+
+    private void RotateFirePoint(Vector2 direction) {
+
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90f;
+
+        firePoint.GetComponent<Rigidbody2D>().rotation = angle;
     }
 
     private void UpdateDirectionAnimation(Vector2 direction)
@@ -110,5 +119,10 @@ public class MageAnimations : MonoBehaviour
             Vector2 moveDirection = new Vector2(horizontalInput, verticalInput).normalized;
             transform.Translate(moveDirection * moveSpeed * Time.deltaTime);
         }
+    }
+
+    private void FixedUpdate()
+    {
+        
     }
 }
