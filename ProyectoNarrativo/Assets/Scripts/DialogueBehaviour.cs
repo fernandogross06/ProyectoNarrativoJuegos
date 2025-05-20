@@ -14,18 +14,23 @@ public class DialogueBehaviour : MonoBehaviour
     private Coroutine typingCoroutine;
     private bool isTyping = false;
 
+    public GameObject dialogGameObject;
+    
     void Start()
     {
-        if (dialogueLines != null && dialogueLines.Count > 0)
-        {
-            typingCoroutine = StartCoroutine(typeDialog(dialogueLines[currentLineIndex]));
-        }
+        //if (dialogueLines != null && dialogueLines.Count > 0)
+        //{
+        //    typingCoroutine = StartCoroutine(typeDialog(dialogueLines[currentLineIndex]));
+        //}
+        Debug.Log("Start method");
+        dialogGameObject.SetActive(false);
     }
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            Debug.Log("Space Pressed");
             if (isTyping)
             {
                 // Terminar línea inmediatamente
@@ -36,6 +41,7 @@ public class DialogueBehaviour : MonoBehaviour
             else
             {
                 currentLineIndex++;
+
                 if (currentLineIndex < dialogueLines.Count)
                 {
                     typingCoroutine = StartCoroutine(typeDialog(dialogueLines[currentLineIndex]));
@@ -55,6 +61,19 @@ public class DialogueBehaviour : MonoBehaviour
                 }
             }
         }
+    }
+
+    public void StartDialog()
+    {
+        Debug.Log("calling StartDialog");
+        dialogGameObject.SetActive(true);
+        if (dialogueLines != null && dialogueLines.Count > 0)
+        {
+            typingCoroutine = StartCoroutine(typeDialog(dialogueLines[currentLineIndex]));
+        }
+
+        return;
+
     }
 
     public IEnumerator typeDialog(string dialog)

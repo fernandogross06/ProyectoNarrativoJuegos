@@ -51,6 +51,7 @@ MonoBehaviour:
     dialogo con espacio"
   - Pueden haber cuantos dialogos se quiera y cuando se termina se deshabilita la
     burbuja
+  dialogGameObject: {fileID: 0}
 --- !u!1 &4871363971025946778
 GameObject:
   m_ObjectHideFlags: 0
