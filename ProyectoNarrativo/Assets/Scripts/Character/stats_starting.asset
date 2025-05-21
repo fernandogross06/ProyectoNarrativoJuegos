@@ -10,25 +10,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0476df8ea7777d44cb435a8368c7d6b6, type: 3}
-  m_Name: CharacterParameters 1
+  m_Name: stats_starting
   m_EditorClassIdentifier: 
-  gravityStrength: -111.1111
-  gravityScale: 3.7037034
+  gravityStrength: -44.444443
+  gravityScale: 1.4814814
   fallGravityMult: 3
   maxFallSpeed: 80
   fastFallGravityMult: 3
   maxFastFallSpeed: 80
-  runMaxSpeed: 10
-  runAcceleration: 10
+  runMaxSpeed: 5
+  runAcceleration: 5
   runAccelAmount: 50
-  runDecceleration: 10
+  runDecceleration: 5
   runDeccelAmount: 50
   accelInAir: 0.188
   deccelInAir: 0.2
   doConserveMomentum: 0
-  jumpHeight: 5
+  jumpHeight: 2
   jumpTimeToApex: 0.3
-  jumpForce: 33.333332
+  jumpForce: 13.333333
   jumpCutGravityMult: 1
   jumpHangGravityMult: 0.131
   jumpHangTimeThreshold: 0

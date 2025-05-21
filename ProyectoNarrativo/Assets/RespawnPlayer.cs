@@ -18,5 +18,11 @@ public class RespawnPlayer : MonoBehaviour
             transform.position = spawnPoint.position;
             dialogueBehaviour.StartNextDialogue(); //  iniciar el siguiente diálogo
         }
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            transform.position = spawnPoint.position;
+            //dialogueBehaviour.StartNextDialogue(); //  iniciar el siguiente diálogo
+        }
     }
 }
