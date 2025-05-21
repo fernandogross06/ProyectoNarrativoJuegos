@@ -2,89 +2,102 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
+
+[System.Serializable]
+public class DialogueSet
+{
+    public List<string> dialogueLines;
+    public List<GameObject> characters;
+}
 public class DialogueBehaviour : MonoBehaviour
 {
     [SerializeField] int letterPerSeconds;
     [SerializeField] TextMeshProUGUI dialogueText;
-    [SerializeField] List<string> dialogueLines;
+    [SerializeField] List<DialogueSet> allDialogues;
 
+    public SpeechBubbleBehaviour speechBubble;
+    public GameObject dialogGameObject;
+
+    private DialogueSet currentDialogue;
+    private int currentDialogueIndex = -1;
     private int currentLineIndex = 0;
+    private int currentSpeakerIndex = 0;
+
     private Coroutine typingCoroutine;
     private bool isTyping = false;
 
-    public GameObject dialogGameObject;
-    
     void Start()
     {
-        //if (dialogueLines != null && dialogueLines.Count > 0)
-        //{
-        //    typingCoroutine = StartCoroutine(typeDialog(dialogueLines[currentLineIndex]));
-        //}
-        Debug.Log("Start method");
         dialogGameObject.SetActive(false);
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && dialogGameObject.activeSelf)
         {
-            Debug.Log("Space Pressed");
             if (isTyping)
             {
-                // Terminar línea inmediatamente
                 StopCoroutine(typingCoroutine);
-                dialogueText.text = dialogueLines[currentLineIndex];
+                dialogueText.text = currentDialogue.dialogueLines[currentLineIndex];
                 isTyping = false;
             }
             else
             {
                 currentLineIndex++;
+                currentSpeakerIndex = currentLineIndex % currentDialogue.characters.Count;
 
-                if (currentLineIndex < dialogueLines.Count)
+                if (currentLineIndex < currentDialogue.dialogueLines.Count)
                 {
-                    typingCoroutine = StartCoroutine(typeDialog(dialogueLines[currentLineIndex]));
+                    typingCoroutine = StartCoroutine(TypeDialog(currentDialogue.dialogueLines[currentLineIndex]));
                 }
                 else
                 {
-                    // Fin del diálogo: desactiva el objeto padre
-                    Transform padre = transform.parent;
-                    if (padre != null)
-                    {
-                        padre.gameObject.SetActive(false);
-                    }
-                    else
-                    {
-                        gameObject.SetActive(false); // Por si no tiene padre
-                    }
+                    dialogGameObject.SetActive(false);
                 }
             }
         }
     }
 
-    public void StartDialog()
+    public void StartNextDialogue()
     {
-        Debug.Log("calling StartDialog");
-        dialogGameObject.SetActive(true);
-        if (dialogueLines != null && dialogueLines.Count > 0)
+        if (allDialogues.Count == 0) return;
+
+        currentDialogueIndex = (currentDialogueIndex + 1) % allDialogues.Count;
+        currentDialogue = allDialogues[currentDialogueIndex];
+
+        if (currentDialogue.dialogueLines.Count == 0 || currentDialogue.characters.Count == 0)
         {
-            typingCoroutine = StartCoroutine(typeDialog(dialogueLines[currentLineIndex]));
+            Debug.LogWarning("El diálogo actual no tiene líneas o personajes.");
+            return;
         }
 
-        return;
+        currentLineIndex = 0;
+        currentSpeakerIndex = 0;
 
+        dialogGameObject.SetActive(true);
+        typingCoroutine = StartCoroutine(TypeDialog(currentDialogue.dialogueLines[currentLineIndex]));
     }
 
-    public IEnumerator typeDialog(string dialog)
+    private IEnumerator TypeDialog(string dialog)
     {
         isTyping = true;
         dialogueText.text = "";
-        foreach (var letter in dialog.ToCharArray())
+
+        GameObject currentSpeaker = currentDialogue.characters[currentSpeakerIndex];
+        Transform speakerTransform = currentSpeaker.transform;
+
+        if (speechBubble != null)
+        {
+            speechBubble.SetCurrentSpeaker(speakerTransform);
+        }
+
+        foreach (char letter in dialog.ToCharArray())
         {
             dialogueText.text += letter;
             yield return new WaitForSeconds(1f / letterPerSeconds);
         }
+
         isTyping = false;
     }
 }
