@@ -10,31 +10,31 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0476df8ea7777d44cb435a8368c7d6b6, type: 3}
-  m_Name: stats_long_jump
+  m_Name: stats_wall_climb
   m_EditorClassIdentifier: 
   gravityStrength: -79.01235
   gravityScale: 2.633745
-  fallGravityMult: 3
+  fallGravityMult: 2
   maxFallSpeed: 18
-  fastFallGravityMult: 3
+  fastFallGravityMult: 1
   maxFastFallSpeed: 18
   runMaxSpeed: 10
-  runAcceleration: 5
-  runAccelAmount: 25
-  runDecceleration: 5
-  runDeccelAmount: 25
-  accelInAir: 0.5
-  deccelInAir: 0.5
+  runAcceleration: 10
+  runAccelAmount: 50
+  runDecceleration: 10
+  runDeccelAmount: 50
+  accelInAir: 1
+  deccelInAir: 1
   doConserveMomentum: 0
   jumpHeight: 8
   jumpTimeToApex: 0.45
   jumpForce: 35.555557
-  jumpCutGravityMult: 1
+  jumpCutGravityMult: 3.5
   jumpHangGravityMult: 1
-  jumpHangTimeThreshold: 1
+  jumpHangTimeThreshold: 0
   jumpHangAccelerationMult: 1
   jumpHangMaxSpeedMult: 1
-  wallJumpForce: {x: 5, y: 5}
+  wallJumpForce: {x: 12, y: 25}
   wallJumpRunLerp: 0.075
   wallJumpTime: 0.3
   doTurnOnWallJump: 0
