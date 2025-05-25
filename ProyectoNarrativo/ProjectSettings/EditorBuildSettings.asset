@@ -12,8 +12,8 @@ EditorBuildSettings:
     path: Assets/Scenes/GameIntro.unity
     guid: 6f71b02208b3447449f1a6a86f356cff
   - enabled: 1
-    path: Assets/Scenes/TopDown.unity
-    guid: 76826306af2ab7b46870555bdda76643
+    path: Assets/Scenes/PlatformerLevelUpMechanic.unity
+    guid: 605a30e5083769d4ca995d51632a7022
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

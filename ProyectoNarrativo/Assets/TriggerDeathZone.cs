@@ -24,7 +24,7 @@ public class TriggerDeathZone : MonoBehaviour
         {
             respawnPlayer.spawnPoint = respawnPoint;
             respawnPlayer.PlayerDeath();
-            dialogueBehaviour.StartNextDialogue();
+            //dialogueBehaviour.StartNextDialogue();
 
         }
     }

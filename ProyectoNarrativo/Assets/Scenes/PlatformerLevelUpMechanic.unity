@@ -1541,7 +1541,7 @@ Transform:
   m_GameObject: {fileID: 674501236}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -36.8, y: -6.1, z: 0}
+  m_LocalPosition: {x: -36.8, y: -11.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8141,7 +8141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6e6e9d9a98ff324e8619f6d420caefc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPoint: {fileID: 2141852536}
+  spawnPoint: {fileID: 1197540155}
   dialogo: {fileID: 3210204843827676581}
   player: {fileID: 1655335292}
 --- !u!1 &1679254126
@@ -8683,16 +8683,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   letterPerSeconds: 25
   dialogueText: {fileID: 282567182450161412}
-  allDialogues:
-  - dialogueEntries:
-    - character: {fileID: 674501236}
-      line: "\xA1Ah la madre se cay\xF3!"
-  - dialogueEntries:
-    - character: {fileID: 674501236}
-      line: Siga intentandolo.
-  - dialogueEntries: []
+  player: {fileID: 1655335291}
+  cacique: {fileID: 674501236}
+  delayBetweenDialogues: 0.5
   speechBubble: {fileID: 8284139695732987275}
   dialogGameObject: {fileID: 5959258823232369378}
+  movement: {fileID: 1655335292}
 --- !u!1 &4871363969866457824
 GameObject:
   m_ObjectHideFlags: 0
@@ -8759,7 +8755,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48bcc20b741627a45ab2fbbf5480195d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  localOffset: {x: 5, y: 0, z: 0}
+  localOffset: {x: 5, y: 3, z: 0}
   scaleOffset: {x: -1.77, y: 2.14, z: 1}
 --- !u!224 &8904812741091336433
 RectTransform:

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using static UnityEngine.EventSystems.EventTrigger;
 
 
 [System.Serializable]
@@ -23,7 +24,13 @@ public class DialogueBehaviour : MonoBehaviour
 {
     [SerializeField] int letterPerSeconds = 30;
     [SerializeField] TextMeshProUGUI dialogueText;
-    [SerializeField] List<DialogueSet> allDialogues;
+    
+    [SerializeField] GameObject player;
+    [SerializeField] GameObject cacique;
+    private Queue<DialogueEntry> dialogueQueue = new Queue<DialogueEntry>();
+    [SerializeField] float delayBetweenDialogues = 0.5f;
+
+     private Rigidbody2D playerRb;
 
     public SpeechBubbleBehaviour speechBubble;
     public GameObject dialogGameObject;
@@ -35,13 +42,18 @@ public class DialogueBehaviour : MonoBehaviour
     private Coroutine typingCoroutine;
     private bool isTyping = false;
 
+    public PlayerMovement movement;
+
     void Start()
     {
         dialogGameObject.SetActive(false);
+        playerRb = player.GetComponent<Rigidbody2D>();
     }
 
     private void Update()
     {
+        //descomentar si se quiere que se pasen los dialogos con espacio o alguna tecla
+        /*
         if (Input.GetKeyDown(KeyCode.Space) && dialogGameObject.activeSelf)
         {
             if (isTyping)
@@ -64,10 +76,10 @@ public class DialogueBehaviour : MonoBehaviour
                     dialogGameObject.SetActive(false);
                 }
             }
-        }
+        }*/
     }
 
-    public void StartNextDialogue()
+    /*public void StartNextDialogue()
     {
         if (allDialogues.Count == 0) return;
 
@@ -76,7 +88,7 @@ public class DialogueBehaviour : MonoBehaviour
 
         if (currentDialogue.dialogueEntries.Count == 0)
         {
-            Debug.LogWarning("El di�logo actual no tiene entradas.");
+            Debug.LogWarning("El dialogo actual no tiene entradas.");
             return;
         }
 
@@ -85,7 +97,7 @@ public class DialogueBehaviour : MonoBehaviour
         dialogGameObject.SetActive(true);
         var entry = currentDialogue.dialogueEntries[0];
         typingCoroutine = StartCoroutine(TypeDialog(entry.line, entry.character));
-    }
+    }*/
 
     private IEnumerator TypeDialog(string dialog, GameObject character)
     {
@@ -104,6 +116,70 @@ public class DialogueBehaviour : MonoBehaviour
         }
 
         isTyping = false;
+
+        if (dialogueQueue.Count > 0)
+        {
+            yield return new WaitForSeconds(delayBetweenDialogues);
+
+            DialogueEntry next = dialogueQueue.Dequeue();
+            typingCoroutine = StartCoroutine(TypeDialog(next.line, next.character));
+        }
+        else
+        {
+            yield return new WaitForSeconds(delayBetweenDialogues);
+            dialogGameObject.SetActive(false);
+            if (movement != null)
+            {
+                movement.enabled = true;
+            }
+        }
+    }
+
+
+    public void setDialoguePlayer(string line)
+    {
+        DialogueEntry entry = new DialogueEntry { character = player, line = line };
+
+       
+                
+        
+
+        if (isTyping)
+        {
+            dialogueQueue.Enqueue(entry);
+        }
+        else
+        {
+            dialogGameObject.SetActive(true);
+            typingCoroutine = StartCoroutine(TypeDialog(entry.line, entry.character));
+            
+        }
+    }
+
+    public void setDialogueCacique(string line)
+    {
+        DialogueEntry entry = new DialogueEntry { character = cacique, line = line };
+
+        if (isTyping)
+        {
+            dialogueQueue.Enqueue(entry);
+        }
+        else
+        {
+            dialogGameObject.SetActive(true);
+            typingCoroutine = StartCoroutine(TypeDialog(entry.line, entry.character));
+        }
+    }
+
+    
+    public void stopMovement()
+    {
+        movement.enabled = false;
+
+        if (playerRb != null)
+        {
+            playerRb.linearVelocity = Vector2.zero;
+        }
     }
 
 

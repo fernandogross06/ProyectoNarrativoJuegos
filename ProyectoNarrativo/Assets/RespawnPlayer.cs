@@ -17,7 +17,12 @@ public class RespawnPlayer : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.F))
         {
             transform.position = spawnPoint.position;
-            dialogueBehaviour.StartNextDialogue(); //  iniciar el siguiente diálogo
+
+            dialogueBehaviour.stopMovement();
+            dialogueBehaviour.setDialogueCacique("linea cacique 1");
+            dialogueBehaviour.setDialogueCacique("linea cacique 2");
+            dialogueBehaviour.setDialoguePlayer("respuesta personaje");
+        
         }
 
         if (Input.GetKeyDown(KeyCode.R))
