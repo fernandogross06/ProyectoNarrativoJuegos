@@ -10,28 +10,28 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0476df8ea7777d44cb435a8368c7d6b6, type: 3}
-  m_Name: stats_long_jump
+  m_Name: 6-stats_starting
   m_EditorClassIdentifier: 
-  gravityStrength: -85.6
-  gravityScale: 2.8533332
+  gravityStrength: -62.5
+  gravityScale: 2.0833333
   fallGravityMult: 3
-  maxFallSpeed: 20
+  maxFallSpeed: 40
   fastFallGravityMult: 3
-  maxFastFallSpeed: 20
-  runMaxSpeed: 12
-  runAcceleration: 3
-  runAccelAmount: 12.5
-  runDecceleration: 5
-  runDeccelAmount: 20.833334
+  maxFastFallSpeed: 40
+  runMaxSpeed: 8
+  runAcceleration: 4
+  runAccelAmount: 25
+  runDecceleration: 4
+  runDeccelAmount: 25
   accelInAir: 0.5
   deccelInAir: 0.5
   doConserveMomentum: 0
-  jumpHeight: 10.7
-  jumpTimeToApex: 0.5
-  jumpForce: 42.8
-  jumpCutGravityMult: 5
-  jumpHangGravityMult: 1
-  jumpHangTimeThreshold: 0.3
+  jumpHeight: 5
+  jumpTimeToApex: 0.4
+  jumpForce: 25
+  jumpCutGravityMult: 1
+  jumpHangGravityMult: 0.131
+  jumpHangTimeThreshold: 0
   jumpHangAccelerationMult: 1
   jumpHangMaxSpeedMult: 1
   wallJumpForce: {x: 5, y: 5}

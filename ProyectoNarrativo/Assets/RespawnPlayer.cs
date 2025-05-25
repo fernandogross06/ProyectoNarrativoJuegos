@@ -5,6 +5,7 @@ public class RespawnPlayer : MonoBehaviour
     public Transform spawnPoint;
     public GameObject dialogo;
     private DialogueBehaviour dialogueBehaviour;
+    public PlayerMovement player;
 
     void Start()
     {
@@ -24,5 +25,16 @@ public class RespawnPlayer : MonoBehaviour
             transform.position = spawnPoint.position;
             //dialogueBehaviour.StartNextDialogue(); //  iniciar el siguiente diálogo
         }
+    }
+
+
+    public void PlayerDeath()
+    {
+        // Animation Pop()
+        // Sound
+        transform.position = spawnPoint.position;
+        player.NextPlayerStats();
+
+
     }
 }

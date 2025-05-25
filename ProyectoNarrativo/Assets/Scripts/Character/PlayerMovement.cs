@@ -6,9 +6,14 @@
 	Feel free to use this in your own games, and I'd love to see anything you make!
  */
 
+using System;
 using System.Collections;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+
+
+
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -25,9 +30,11 @@ public class PlayerMovement : MonoBehaviour
 
     public PlayerData LongJumpStats;
 
+    public List<PlayerData> PlayerStats = new List<PlayerData>();
+	int stats_index = 0;
 
     #region GUI
-	public TextMeshProUGUI stats_text;
+    public TextMeshProUGUI stats_text;
 
     #endregion
 
@@ -81,6 +88,7 @@ public class PlayerMovement : MonoBehaviour
     private void Awake()
 	{
 		RB = GetComponent<Rigidbody2D>();
+        CurrentStats = PlayerStats[stats_index];
 
     }
 
@@ -88,8 +96,8 @@ public class PlayerMovement : MonoBehaviour
 	{
 		SetGravityScale(CurrentStats.gravityScale);
 		IsFacingRight = true;
-        stats_text.text = "Jump!";
-		CurrentStats = StartingStats;
+        stats_text.text = stats_index.ToString();
+		//CurrentStats = StartingStats;
     }
 
 	private void Update()
@@ -110,16 +118,24 @@ public class PlayerMovement : MonoBehaviour
 		if (_moveInput.x != 0)
 			CheckDirectionToFace(_moveInput.x > 0);
 
-        if (Input.GetKeyDown(KeyCode.Alpha1) )
+        if (Input.GetKeyDown(KeyCode.Alpha2) )
         {
-            CurrentStats = StartingStats;
-            stats_text.text = "1";
-
+			if (PlayerStats.Count > 0)
+			{
+                stats_index = (stats_index + 1) % PlayerStats.Count;
+                stats_text.text = stats_index.ToString();
+                CurrentStats = PlayerStats[stats_index];
+			}
         }
-        if (Input.GetKeyDown(KeyCode.Alpha2))
+        if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            CurrentStats = LongJumpStats;
-            stats_text.text = "2";
+
+            if (PlayerStats.Count > 0)
+            {
+                stats_index = (stats_index - 1 + PlayerStats.Count) % PlayerStats.Count;
+                stats_text.text = stats_index.ToString();
+                CurrentStats = PlayerStats[stats_index];
+            }
         }
 
         if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.C) || Input.GetKeyDown(KeyCode.J))
@@ -457,6 +473,24 @@ public class PlayerMovement : MonoBehaviour
 		Gizmos.DrawWireCube(_frontWallCheckPoint.position, _wallCheckSize);
 		Gizmos.DrawWireCube(_backWallCheckPoint.position, _wallCheckSize);
 	}
+    #endregion
+
+    #region StatsMethods
+	public void SetPlayerStats(int index)
+	{
+        if (PlayerStats.Count > 0  & index>=0 & index< PlayerStats.Count)
+            CurrentStats = PlayerStats[index];
+	}
+    public void NextPlayerStats()
+    {
+		if (PlayerStats.Count > 0 & stats_index < (PlayerStats.Count - 1)) { 
+
+			stats_index = (stats_index + 1);
+            stats_text.text = stats_index.ToString();
+            CurrentStats = PlayerStats[stats_index];
+        }
+    }
+
     #endregion
 }
 

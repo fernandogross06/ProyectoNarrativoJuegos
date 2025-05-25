@@ -1,18 +1,27 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
 
 [System.Serializable]
+public class DialogueEntry
+{
+    public GameObject character;
+    [TextArea]
+    public string line;
+}
+
+[System.Serializable]
 public class DialogueSet
 {
-    public List<string> dialogueLines;
-    public List<GameObject> characters;
+    public List<DialogueEntry> dialogueEntries;
 }
+
+
 public class DialogueBehaviour : MonoBehaviour
 {
-    [SerializeField] int letterPerSeconds;
+    [SerializeField] int letterPerSeconds = 30;
     [SerializeField] TextMeshProUGUI dialogueText;
     [SerializeField] List<DialogueSet> allDialogues;
 
@@ -22,7 +31,6 @@ public class DialogueBehaviour : MonoBehaviour
     private DialogueSet currentDialogue;
     private int currentDialogueIndex = -1;
     private int currentLineIndex = 0;
-    private int currentSpeakerIndex = 0;
 
     private Coroutine typingCoroutine;
     private bool isTyping = false;
@@ -39,17 +47,17 @@ public class DialogueBehaviour : MonoBehaviour
             if (isTyping)
             {
                 StopCoroutine(typingCoroutine);
-                dialogueText.text = currentDialogue.dialogueLines[currentLineIndex];
+                dialogueText.text = currentDialogue.dialogueEntries[currentLineIndex].line;
                 isTyping = false;
             }
             else
             {
                 currentLineIndex++;
-                currentSpeakerIndex = currentLineIndex % currentDialogue.characters.Count;
 
-                if (currentLineIndex < currentDialogue.dialogueLines.Count)
+                if (currentLineIndex < currentDialogue.dialogueEntries.Count)
                 {
-                    typingCoroutine = StartCoroutine(TypeDialog(currentDialogue.dialogueLines[currentLineIndex]));
+                    var entry = currentDialogue.dialogueEntries[currentLineIndex];
+                    typingCoroutine = StartCoroutine(TypeDialog(entry.line, entry.character));
                 }
                 else
                 {
@@ -66,30 +74,27 @@ public class DialogueBehaviour : MonoBehaviour
         currentDialogueIndex = (currentDialogueIndex + 1) % allDialogues.Count;
         currentDialogue = allDialogues[currentDialogueIndex];
 
-        if (currentDialogue.dialogueLines.Count == 0 || currentDialogue.characters.Count == 0)
+        if (currentDialogue.dialogueEntries.Count == 0)
         {
-            Debug.LogWarning("El diálogo actual no tiene líneas o personajes.");
+            Debug.LogWarning("El diï¿½logo actual no tiene entradas.");
             return;
         }
 
         currentLineIndex = 0;
-        currentSpeakerIndex = 0;
 
         dialogGameObject.SetActive(true);
-        typingCoroutine = StartCoroutine(TypeDialog(currentDialogue.dialogueLines[currentLineIndex]));
+        var entry = currentDialogue.dialogueEntries[0];
+        typingCoroutine = StartCoroutine(TypeDialog(entry.line, entry.character));
     }
 
-    private IEnumerator TypeDialog(string dialog)
+    private IEnumerator TypeDialog(string dialog, GameObject character)
     {
         isTyping = true;
         dialogueText.text = "";
 
-        GameObject currentSpeaker = currentDialogue.characters[currentSpeakerIndex];
-        Transform speakerTransform = currentSpeaker.transform;
-
-        if (speechBubble != null)
+        if (speechBubble != null && character != null)
         {
-            speechBubble.SetCurrentSpeaker(speakerTransform);
+            speechBubble.SetCurrentSpeaker(character.transform);
         }
 
         foreach (char letter in dialog.ToCharArray())
@@ -100,4 +105,6 @@ public class DialogueBehaviour : MonoBehaviour
 
         isTyping = false;
     }
+
+
 }
