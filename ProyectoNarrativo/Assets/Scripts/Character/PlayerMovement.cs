@@ -23,7 +23,7 @@ public class PlayerMovement : MonoBehaviour
     //HOW TO: to add the scriptable object, right-click in the project window -> create -> Player CurrentStats
     //Next, drag it into the slot in playerMovement on your player
 
-
+	public Animator animator;
     public PlayerData CurrentStats;
 
     public PlayerData StartingStats;
@@ -115,6 +115,7 @@ public class PlayerMovement : MonoBehaviour
 		_moveInput.x = Input.GetAxisRaw("Horizontal");
 		_moveInput.y = Input.GetAxisRaw("Vertical");
 
+		animator.SetFloat("Speed", Mathf.Abs(_moveInput.x));
 		if (_moveInput.x != 0)
 			CheckDirectionToFace(_moveInput.x > 0);
 
@@ -177,7 +178,8 @@ public class PlayerMovement : MonoBehaviour
 		if (IsJumping && RB.linearVelocity.y < 0)
 		{
 			IsJumping = false;
-
+			// ANIMATION
+			animator.SetBool("IsJumping", false);
 			if(!IsWallJumping)
 				_isJumpFalling = true;
 		}
@@ -199,7 +201,8 @@ public class PlayerMovement : MonoBehaviour
 		if (CanJump() && LastPressedJumpTime > 0)
 		{
 			IsJumping = true;
-			IsWallJumping = false;
+            animator.SetBool("IsJumping", true);
+            IsWallJumping = false;
 			_isJumpCut = false;
 			_isJumpFalling = false;
 			Jump();
@@ -220,14 +223,19 @@ public class PlayerMovement : MonoBehaviour
 
 		#region SLIDE CHECKS
 		if (CanSlide() && ((LastOnWallLeftTime > 0 && _moveInput.x < 0) || (LastOnWallRightTime > 0 && _moveInput.x > 0)))
+		{
 			IsSliding = true;
-		else
+			animator.SetBool("IsSliding", true);
+		}
+		else { 
 			IsSliding = false;
-		#endregion
+            animator.SetBool("IsSliding", false);
+        }
+        #endregion
 
-		#region GRAVITY
-		//Higher gravity if we've released the jump input or are falling
-		if (IsSliding)
+        #region GRAVITY
+        //Higher gravity if we've released the jump input or are falling
+        if (IsSliding)
 		{
 			SetGravityScale(0);
 		}

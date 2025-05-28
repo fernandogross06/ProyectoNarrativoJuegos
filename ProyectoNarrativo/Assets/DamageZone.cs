@@ -27,7 +27,7 @@ public class DamageZone : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             respawnPlayer.spawnPoint = respawnPoint;
-            respawnPlayer.PlayerDeath();
+            //respawnPlayer.PlayerDeath();
 
         }
     }
