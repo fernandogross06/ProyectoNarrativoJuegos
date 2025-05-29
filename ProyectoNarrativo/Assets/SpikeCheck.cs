@@ -30,13 +30,14 @@ public class SpikeCheck : MonoBehaviour
         if (collision != null)
         {
             Debug.Log("Toqué algo");
-        }
-        if(!isDeath) { 
-            if (collision.gameObject.CompareTag("Spikes"))
-            {
-                //respawnPlayer.spawnPoint = respawnPoint;
-                isDeath = true;
-                StartCoroutine(DeathSequence());
+        
+            if(!isDeath) { 
+                if (collision.gameObject.CompareTag("Spikes"))
+                {
+                    //respawnPlayer.spawnPoint = respawnPoint;
+                    isDeath = true;
+                    StartCoroutine(DeathSequence());
+                }
             }
         }
     }
