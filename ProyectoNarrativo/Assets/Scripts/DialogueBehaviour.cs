@@ -182,5 +182,14 @@ public class DialogueBehaviour : MonoBehaviour
         }
     }
 
+    public void SetCaciquePosition(Vector3 nuevaPosicion)
+    {
+        
+            cacique.transform.position = nuevaPosicion;
+
+           
+        
+    }
+
 
 }

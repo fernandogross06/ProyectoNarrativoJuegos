@@ -22,21 +22,50 @@ public class SpeechBubbleBehaviour : MonoBehaviour
     public void SetCurrentSpeaker(Transform speakerTransform)
     {
         currentSpeaker = speakerTransform;
-        AplicarTransformaciones();
+
+       
+        bool isCacique = speakerTransform.name.ToLower().Contains("cacique");
+        
+
+        AplicarTransformaciones(isCacique);
     }
 
-    void AplicarTransformaciones()
+    void AplicarTransformaciones(bool invertY = false)
     {
         if (currentSpeaker == null) return;
 
+        Debug.DrawLine(currentSpeaker.position, transform.position, Color.red, 1f);
+
+        int invertir = 1;
+        bool isCacique = currentSpeaker.name.ToLower().Contains("cacique");
+        
+        if (isCacique)
+        {
+         
+            invertir = -1;
+        }
+
         Vector3 nuevaEscala = new Vector3(
             Mathf.Abs(currentSpeaker.localScale.x) * scaleOffset.x,
-            currentSpeaker.localScale.y * scaleOffset.y,
+            currentSpeaker.localScale.y * scaleOffset.y * invertir,
             currentSpeaker.localScale.z * scaleOffset.z
         );
         transform.localScale = nuevaEscala;
 
-        Vector3 nuevaPosicion = currentSpeaker.position + localOffset;
+ 
+
+        
+        foreach (Transform child in transform)
+        {
+            Vector3 childScale = child.localScale;
+            childScale.y = Mathf.Abs(childScale.y) * invertir;
+            child.localScale = childScale;
+        }
+
+        Vector3 offsetUsado = localOffset;
+        offsetUsado.y *= invertir;
+
+        Vector3 nuevaPosicion = currentSpeaker.position + offsetUsado;
         nuevaPosicion.z = -1f;
         transform.position = nuevaPosicion;
     }
