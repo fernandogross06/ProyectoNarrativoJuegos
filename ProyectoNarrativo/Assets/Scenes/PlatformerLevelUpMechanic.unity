@@ -330,7 +330,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &63698073
 Transform:
   m_ObjectHideFlags: 0
@@ -340,11 +340,11 @@ Transform:
   m_GameObject: {fileID: 63698072}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.26, y: -1.23, z: 0}
+  m_LocalPosition: {x: -15.68, y: -2.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 286280498}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &63698074
 Animator:
@@ -597,7 +597,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &141007778
 Transform:
   m_ObjectHideFlags: 0
@@ -607,11 +607,11 @@ Transform:
   m_GameObject: {fileID: 141007777}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.26, y: 6.5, z: 0}
+  m_LocalPosition: {x: 93.22, y: 58.92, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1479941806}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &141007779
 Animator:
@@ -747,38 +747,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c448cf142cd03184db047e9844166f27, type: 3}
---- !u!1 &168142193
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 168142194}
-  m_Layer: 0
-  m_Name: char2Prueba (3)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &168142194
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 168142193}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.55, y: 8.78, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1040948484}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &179086616
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -996,6 +964,132 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &219063190
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 219063193}
+  - component: {fileID: 219063192}
+  - component: {fileID: 219063191}
+  m_Layer: 0
+  m_Name: DialogueTriggerScene1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &219063191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 219063190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7897730cc947454c8cc5e3eaf17587c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isFirstEntry: 1
+  dialogueLines:
+  - speaker: 1
+    text: Bien hecho.
+    disableAfterLine: 0
+    enableBeforeLine: 0
+  - speaker: 1
+    text: "Ahora, deber\xE1s cruzar hasta la siguiente isla."
+    disableAfterLine: 0
+    enableBeforeLine: 0
+  - speaker: 0
+    text: "Ok. Imagino que me vienen a recoger en alguna aeronave, ave gigante o
+      algo por el estilo, \xBFno?"
+    disableAfterLine: 0
+    enableBeforeLine: 0
+  - speaker: 1
+    text: "No. Deber\xE1s ser capaz de cruzar una distancia como por cuenta propia."
+    disableAfterLine: 0
+    enableBeforeLine: 0
+  - speaker: 0
+    text: "\xBFPerd\xF3n? No s\xE9 si se ech\xF3 una siestita mientras escalaba aquella
+      colina, "
+    disableAfterLine: 0
+    enableBeforeLine: 0
+  - speaker: 0
+    text: pero no hay manera de que yo pueda subir hasta esa isla por mi cuenta.
+    disableAfterLine: 0
+    enableBeforeLine: 0
+  - speaker: 1
+    text: " S\xED la hay. Mire."
+    disableAfterLine: 0
+    enableBeforeLine: 0
+  detenerMovimiento: 1
+  dialogo: {fileID: 3210204843827676581}
+  posicionActual: {x: -37.129997, y: -7.89, z: 0}
+--- !u!61 &219063192
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 219063190}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!4 &219063193
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 219063190}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -40.5, y: -14.02, z: 0.55510086}
+  m_LocalScale: {x: 1, y: 4.16, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &223106914
 GameObject:
   m_ObjectHideFlags: 0
@@ -1023,6 +1117,106 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 51.43, y: 32.87, z: -0.20159054}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &252434147
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 252434150}
+  - component: {fileID: 252434149}
+  - component: {fileID: 252434148}
+  m_Layer: 0
+  m_Name: DialogueTriggerScene4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &252434148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 252434147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7897730cc947454c8cc5e3eaf17587c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isFirstEntry: 1
+  dialogueLines:
+  - speaker: 0
+    text: "\xBFEstar\xE1 por aqu\xED\u2026?"
+    disableAfterLine: 0
+    enableBeforeLine: 0
+  detenerMovimiento: 1
+  dialogo: {fileID: 3210204843827676581}
+  posicionActual: {x: 1.29, y: 7.5499997, z: 0}
+--- !u!61 &252434149
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 252434147}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!4 &252434150
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 252434147}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 10.86, y: 8.83, z: 0.55510086}
+  m_LocalScale: {x: 1, y: 4.4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1056,38 +1250,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &286280497
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 286280498}
-  m_Layer: 0
-  m_Name: char2Prueba (2)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &286280498
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 286280497}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.42, y: -0.87, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 63698073}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &288718194
@@ -1148,11 +1310,11 @@ Transform:
   m_GameObject: {fileID: 327951584}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.26, y: -1.23, z: 0}
+  m_LocalPosition: {x: -50.699997, y: -7.89, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 674501238}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &327951586
 Animator:
@@ -1288,6 +1450,106 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c448cf142cd03184db047e9844166f27, type: 3}
+--- !u!1 &351118687
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 351118690}
+  - component: {fileID: 351118689}
+  - component: {fileID: 351118688}
+  m_Layer: 0
+  m_Name: DialogueTriggerScene6
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &351118688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 351118687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7897730cc947454c8cc5e3eaf17587c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isFirstEntry: 1
+  dialogueLines:
+  - speaker: 0
+    text: Estoy cerca, estoy seguro.
+    disableAfterLine: 0
+    enableBeforeLine: 0
+  detenerMovimiento: 1
+  dialogo: {fileID: 3210204843827676581}
+  posicionActual: {x: 51.6, y: 33.9, z: 0}
+--- !u!61 &351118689
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 351118687}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!4 &351118690
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 351118687}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 44.54, y: 31.59, z: 0.55510086}
+  m_LocalScale: {x: 1, y: 4.4, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &358005314
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5061,6 +5323,11 @@ MonoBehaviour:
   spawnPoint: {fileID: 1197540155}
   dialogo: {fileID: 3210204843827676581}
   player: {fileID: 534825770}
+  scene1: 1
+  scene2: 0
+  scene3: 0
+  scene4: 0
+  scene5: 0
 --- !u!114 &534825770
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5343,38 +5610,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &608364477
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 608364478}
-  m_Layer: 0
-  m_Name: char2Prueba (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &608364478
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 608364477}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -32.87, y: -6.66, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1187218868}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &638067872
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5446,7 +5681,7 @@ GameObject:
   - component: {fileID: 638290141}
   m_Layer: 0
   m_Name: ZoneChangeTriggerSpikes
-  m_TagString: Untagged
+  m_TagString: ZONA4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5641,38 +5876,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c448cf142cd03184db047e9844166f27, type: 3}
---- !u!1 &674501236
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 674501238}
-  m_Layer: 0
-  m_Name: char2Prueba
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &674501238
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 674501236}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -46.44, y: -6.66, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 327951585}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &676038641
 GameObject:
   m_ObjectHideFlags: 0
@@ -5775,7 +5978,7 @@ GameObject:
   - component: {fileID: 682492519}
   m_Layer: 0
   m_Name: ZoneChangeTriggerWallClimbZoom
-  m_TagString: Untagged
+  m_TagString: ZONA3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5944,6 +6147,252 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1679254127}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &718205223
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 718205226}
+  - component: {fileID: 718205225}
+  - component: {fileID: 718205224}
+  m_Layer: 0
+  m_Name: DialogueTriggerScene3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &718205224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 718205223}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7897730cc947454c8cc5e3eaf17587c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isFirstEntry: 1
+  dialogueLines:
+  - speaker: 1
+    text: "Sab\xEDa que eras capaz de subir hasta aqu\xED."
+    disableAfterLine: 0
+    enableBeforeLine: 0
+  - speaker: 1
+    text: "Parece que ya est\xE1s m\xE1s que preparado para subir hasta lo alto de
+      las Islas Flotantes.\r"
+    disableAfterLine: 0
+    enableBeforeLine: 0
+  - speaker: 0
+    text: "\xA1Gracias! No lo habr\xEDa podido lograr por mi cuenta."
+    disableAfterLine: 0
+    enableBeforeLine: 0
+  - speaker: 1
+    text: "Oh. Bueno. Mi trabajo aqu\xED ha terminado. Adi\xF3s"
+    disableAfterLine: 1
+    enableBeforeLine: 0
+  - speaker: 0
+    text: "\xBFSe\xF1or? \xBFQu\xE9 se hizo?"
+    disableAfterLine: 0
+    enableBeforeLine: 0
+  - speaker: 0
+    text: " Deber\xEDa buscarlo."
+    disableAfterLine: 0
+    enableBeforeLine: 0
+  detenerMovimiento: 1
+  dialogo: {fileID: 3210204843827676581}
+  posicionActual: {x: 1.29, y: 7.5499997, z: 0}
+--- !u!61 &718205225
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 718205223}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!4 &718205226
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 718205223}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.5, y: 3.53, z: 0.55510086}
+  m_LocalScale: {x: 1, y: 4.4, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &725324750
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 725324753}
+  - component: {fileID: 725324752}
+  - component: {fileID: 725324751}
+  m_Layer: 0
+  m_Name: DialogueTriggerScene10
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &725324751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 725324750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7897730cc947454c8cc5e3eaf17587c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isFirstEntry: 1
+  dialogueLines:
+  - speaker: 0
+    text: "\xA1Por fin! \xA1Ah\xED est\xE1 el coraz\xF3n de oro! Pero\u2026 no hay
+      manera de que llegue ah\xED saltando\u2026"
+    disableAfterLine: 0
+    enableBeforeLine: 0
+  - speaker: 0
+    text: "\xBFAcaso todo este esfuerzo fue en vano?"
+    disableAfterLine: 0
+    enableBeforeLine: 0
+  - speaker: 1
+    text: No hay tal cosa como un esfuerzo en vano.
+    disableAfterLine: 0
+    enableBeforeLine: 1
+  - speaker: 1
+    text: "No dudes en el \xFAltimo momento."
+    disableAfterLine: 0
+    enableBeforeLine: 0
+  - speaker: 1
+    text: " No olvides todos los desaf\xEDos que has superado."
+    disableAfterLine: 0
+    enableBeforeLine: 0
+  - speaker: 1
+    text: "Y\u2026"
+    disableAfterLine: 0
+    enableBeforeLine: 0
+  - speaker: 1
+    text: No tengas miedo, siempre lo puedes volver a intentar
+    disableAfterLine: 0
+    enableBeforeLine: 0
+  detenerMovimiento: 1
+  dialogo: {fileID: 3210204843827676581}
+  posicionActual: {x: 91.799995, y: 58.92, z: 0}
+--- !u!61 &725324752
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 725324750}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!4 &725324753
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 725324750}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: -0.0040143305, z: 0, w: 0.99999195}
+  m_LocalPosition: {x: 92.03, y: 55.81, z: 0.55510086}
+  m_LocalScale: {x: 1, y: 2.84, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -0.46, z: 0}
 --- !u!1 &748463997
 GameObject:
   m_ObjectHideFlags: 0
@@ -5974,6 +6423,164 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1679254127}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &754733938
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 754733941}
+  - component: {fileID: 754733940}
+  - component: {fileID: 754733939}
+  m_Layer: 0
+  m_Name: DialogueTriggerStart
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &754733939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 754733938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7897730cc947454c8cc5e3eaf17587c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isFirstEntry: 1
+  dialogueLines:
+  - speaker: 0
+    text: "\xBFD\xF3nde estoy\u2026? \xBFC\xF3mo llegu\xE9 aqu\xED?"
+    disableAfterLine: 0
+    enableBeforeLine: 0
+  - speaker: 1
+    text: Bienvenido al mundo de las Islas Flotantes, joven.
+    disableAfterLine: 0
+    enableBeforeLine: 0
+  - speaker: 1
+    text: "Es tu misi\xF3n subir a la isla m\xE1s alta de este mundo. Ah\xED, arriba
+      de todas las cosas, se halla el coraz\xF3n de oro."
+    disableAfterLine: 0
+    enableBeforeLine: 0
+  - speaker: 1
+    text: "Es tanto el poder del coraz\xF3n de oro,"
+    disableAfterLine: 0
+    enableBeforeLine: 0
+  - speaker: 1
+    text: "que aquel que consiga tal proeza obtendr\xE1 para siempre la capacidad
+      de ser due\xF1o de su propio destino."
+    disableAfterLine: 0
+    enableBeforeLine: 0
+  - speaker: 0
+    text: "\xBFAh? \xA1No tengo tiempo para eso!.\r"
+    disableAfterLine: 0
+    enableBeforeLine: 0
+  - speaker: 0
+    text: " \xA1El \xFAnico oro que me interesa es el de mi rango antes de que se
+      acabe la temporada!"
+    disableAfterLine: 0
+    enableBeforeLine: 0
+  - speaker: 0
+    text: " \xBF\xA1C\xF3mo vuelvo a mi cuarto!?"
+    disableAfterLine: 0
+    enableBeforeLine: 0
+  - speaker: 1
+    text: "Parece que la paciencia no es una virtud de la que seas poseedor\u2026
+      .\r\r"
+    disableAfterLine: 0
+    enableBeforeLine: 0
+  - speaker: 1
+    text: "C\xF3mo dije, aquel que tenga el poder del coraz\xF3n de oro podr\xE1
+      ser due\xF1o de su destino"
+    disableAfterLine: 0
+    enableBeforeLine: 0
+  - speaker: 1
+    text: "Y eso incluye poder volver al mundo de donde vienes.\r\n\r\r"
+    disableAfterLine: 0
+    enableBeforeLine: 0
+  - speaker: 0
+    text: "No s\xE9\u2026 \xBFNo hay otra manera m\xE1s\u2026 f\xE1cil? La verdad
+      no tengo muy buena condici\xF3n que digamos\u2026"
+    disableAfterLine: 0
+    enableBeforeLine: 0
+  - speaker: 1
+    text: "Es la \xFAnica manera."
+    disableAfterLine: 0
+    enableBeforeLine: 0
+  - speaker: 0
+    text: "\u2026"
+    disableAfterLine: 0
+    enableBeforeLine: 0
+  detenerMovimiento: 1
+  dialogo: {fileID: 3210204843827676581}
+  posicionActual: {x: -50.699997, y: -7.89, z: 0}
+--- !u!61 &754733940
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 754733938}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!4 &754733941
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 754733938}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -57.83, y: -14.08, z: 0.55510086}
+  m_LocalScale: {x: 1, y: 2.74, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &773125344
 GameObject:
@@ -6985,7 +7592,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1040948484
 Transform:
   m_ObjectHideFlags: 0
@@ -6995,11 +7602,11 @@ Transform:
   m_GameObject: {fileID: 1040948483}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.26, y: -1.23, z: 0}
+  m_LocalPosition: {x: 1.29, y: 7.5499997, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 168142194}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1040948485
 Animator:
@@ -7363,6 +7970,122 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c448cf142cd03184db047e9844166f27, type: 3}
+--- !u!1 &1124830980
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1124830983}
+  - component: {fileID: 1124830982}
+  - component: {fileID: 1124830981}
+  m_Layer: 0
+  m_Name: DialogueTriggerScene2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1124830981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1124830980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7897730cc947454c8cc5e3eaf17587c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isFirstEntry: 1
+  dialogueLines:
+  - speaker: 1
+    text: "Excelente. Sab\xEDa que lo pod\xEDas hacer"
+    disableAfterLine: 0
+    enableBeforeLine: 0
+  - speaker: 0
+    text: "\xA1Gracias! \xA1Never guibap!"
+    disableAfterLine: 0
+    enableBeforeLine: 0
+  - speaker: 1
+    text: Ahora, sube hasta arriba de esa columna flotante.
+    disableAfterLine: 0
+    enableBeforeLine: 0
+  - speaker: 0
+    text: "Okey, creo que se est\xE1 pasando un poquito."
+    disableAfterLine: 0
+    enableBeforeLine: 0
+  - speaker: 1
+    text: Never give up.
+    disableAfterLine: 0
+    enableBeforeLine: 0
+  detenerMovimiento: 1
+  dialogo: {fileID: 3210204843827676581}
+  posicionActual: {x: -15.68, y: -2.1, z: 0}
+--- !u!61 &1124830982
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1124830980}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!4 &1124830983
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1124830980}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -20.03, y: -6.48, z: 0.55510086}
+  m_LocalScale: {x: 1, y: 4.4, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1156756884
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7570,6 +8293,106 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!1 &1186367007
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1186367010}
+  - component: {fileID: 1186367009}
+  - component: {fileID: 1186367008}
+  m_Layer: 0
+  m_Name: DialogueTriggerScene8
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1186367008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1186367007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7897730cc947454c8cc5e3eaf17587c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isFirstEntry: 1
+  dialogueLines:
+  - speaker: 0
+    text: Por fin abajo, ahora toca subir. No me puedo rendir ahora.
+    disableAfterLine: 0
+    enableBeforeLine: 0
+  detenerMovimiento: 1
+  dialogo: {fileID: 3210204843827676581}
+  posicionActual: {x: 51.6, y: 33.9, z: 0}
+--- !u!61 &1186367009
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1186367007}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!4 &1186367010
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1186367007}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: -0.0040143305, z: 0, w: 0.99999195}
+  m_LocalPosition: {x: 86.12, y: 15.95, z: 0.55510086}
+  m_LocalScale: {x: 1, y: 4.4, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -0.46, z: 0}
 --- !u!1 &1187218867
 GameObject:
   m_ObjectHideFlags: 0
@@ -7587,7 +8410,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1187218868
 Transform:
   m_ObjectHideFlags: 0
@@ -7597,11 +8420,11 @@ Transform:
   m_GameObject: {fileID: 1187218867}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.26, y: -1.23, z: 0}
+  m_LocalPosition: {x: -37.129997, y: -7.89, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 608364478}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1187218869
 Animator:
@@ -22489,8 +23312,7 @@ Transform:
   m_LocalPosition: {x: 96.06, y: 52.42, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 141007778}
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1479972835
@@ -22709,7 +23531,7 @@ GameObject:
   - component: {fileID: 1515314582}
   m_Layer: 0
   m_Name: ZoneChangeTriggerVerticalSpikes
-  m_TagString: Untagged
+  m_TagString: ZONA5
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23188,7 +24010,7 @@ GameObject:
   - component: {fileID: 1591176780}
   m_Layer: 0
   m_Name: ZoneChangeSecondLevel
-  m_TagString: Untagged
+  m_TagString: ZONA2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23526,7 +24348,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1647189232
 Transform:
   m_ObjectHideFlags: 0
@@ -23536,11 +24358,11 @@ Transform:
   m_GameObject: {fileID: 1647189231}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.26, y: -1.23, z: 0}
+  m_LocalPosition: {x: 51.6, y: 33.9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1763235223}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1647189233
 Animator:
@@ -23837,6 +24659,11 @@ MonoBehaviour:
   spawnPoint: {fileID: 1197540155}
   dialogo: {fileID: 3210204843827676581}
   player: {fileID: 1655335292}
+  scene1: 1
+  scene2: 0
+  scene3: 0
+  scene4: 0
+  scene5: 0
 --- !u!1001 &1666128974
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23894,6 +24721,106 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c448cf142cd03184db047e9844166f27, type: 3}
+--- !u!1 &1673527045
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1673527048}
+  - component: {fileID: 1673527047}
+  - component: {fileID: 1673527046}
+  m_Layer: 0
+  m_Name: DialogueTriggerScene7
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1673527046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1673527045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7897730cc947454c8cc5e3eaf17587c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isFirstEntry: 1
+  dialogueLines:
+  - speaker: 0
+    text: Voy a tener que rodear esto.
+    disableAfterLine: 0
+    enableBeforeLine: 0
+  detenerMovimiento: 1
+  dialogo: {fileID: 3210204843827676581}
+  posicionActual: {x: 51.6, y: 33.9, z: 0}
+--- !u!61 &1673527047
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1673527045}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!4 &1673527048
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1673527045}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 74, y: 43.3, z: 0.55510086}
+  m_LocalScale: {x: 1, y: 4.4, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1679254126
 GameObject:
   m_ObjectHideFlags: 0
@@ -24047,6 +24974,106 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1202535816}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1699443665
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1699443668}
+  - component: {fileID: 1699443667}
+  - component: {fileID: 1699443666}
+  m_Layer: 0
+  m_Name: DialogueTriggerScene9
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1699443666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1699443665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7897730cc947454c8cc5e3eaf17587c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isFirstEntry: 1
+  dialogueLines:
+  - speaker: 0
+    text: "solo un poco m\xE1s, estoy seguro."
+    disableAfterLine: 0
+    enableBeforeLine: 0
+  detenerMovimiento: 1
+  dialogo: {fileID: 3210204843827676581}
+  posicionActual: {x: 51.6, y: 33.9, z: 0}
+--- !u!61 &1699443667
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1699443665}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!4 &1699443668
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1699443665}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: -0.0040143305, z: 0, w: 0.99999195}
+  m_LocalPosition: {x: 83.21, y: 50.24, z: 0.55510086}
+  m_LocalScale: {x: 1, y: 4.4, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -0.46, z: 0}
 --- !u!1 &1700261121
 GameObject:
   m_ObjectHideFlags: 0
@@ -24179,6 +25206,11 @@ MonoBehaviour:
   spawnPoint: {fileID: 1197540155}
   dialogo: {fileID: 3210204843827676581}
   player: {fileID: 1700261128}
+  scene1: 1
+  scene2: 0
+  scene3: 0
+  scene4: 0
+  scene5: 0
 --- !u!50 &1700261126
 Rigidbody2D:
   serializedVersion: 5
@@ -24650,38 +25682,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1763235222
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1763235223}
-  m_Layer: 0
-  m_Name: char2Prueba (4)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1763235223
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1763235222}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 55.86, y: 35.13, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1647189232}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1775220490
@@ -25585,6 +26585,114 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c448cf142cd03184db047e9844166f27, type: 3}
+--- !u!1 &2118243367
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2118243370}
+  - component: {fileID: 2118243369}
+  - component: {fileID: 2118243368}
+  m_Layer: 0
+  m_Name: DialogueTriggerScene5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2118243368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2118243367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7897730cc947454c8cc5e3eaf17587c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isFirstEntry: 1
+  dialogueLines:
+  - speaker: 0
+    text: "\xBFlo\u2026 pude hacer?"
+    disableAfterLine: 0
+    enableBeforeLine: 0
+  - speaker: 0
+    text: "Ya no hay vuelta atr\xE1s tengo que seguir."
+    disableAfterLine: 0
+    enableBeforeLine: 0
+  - speaker: 0
+    text: "Oh\u2026 Ni modo. No pierdo nada por intentarlo."
+    disableAfterLine: 0
+    enableBeforeLine: 0
+  detenerMovimiento: 1
+  dialogo: {fileID: 3210204843827676581}
+  posicionActual: {x: 1.29, y: 7.5499997, z: 0}
+--- !u!61 &2118243369
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2118243367}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!4 &2118243370
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2118243367}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 44.05, y: 8.83, z: 0.55510086}
+  m_LocalScale: {x: 1, y: 4.4, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2128451803
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25695,8 +26803,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ac79b009fc9824a45a5e8e0d6997a78a, type: 2}
+  m_sharedMaterial: {fileID: -8069898752568033381, guid: ac79b009fc9824a45a5e8e0d6997a78a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -25830,7 +26938,7 @@ Transform:
   m_GameObject: {fileID: 5959258823232369378}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.91, y: -9.18, z: -1}
+  m_LocalPosition: {x: -39.7, y: 29.9, z: -1}
   m_LocalScale: {x: -1.77, y: 2.14, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -25990,7 +27098,7 @@ MonoBehaviour:
   letterPerSeconds: 25
   dialogueText: {fileID: 282567182450161412}
   player: {fileID: 1700261121}
-  cacique: {fileID: 674501236}
+  cacique: {fileID: 327951584}
   delayBetweenDialogues: 0.5
   speechBubble: {fileID: 8284139695732987275}
   dialogGameObject: {fileID: 5959258823232369378}
@@ -26156,11 +27264,12 @@ SceneRoots:
   - {fileID: 223106915}
   - {fileID: 1684340891}
   - {fileID: 497725717}
-  - {fileID: 674501238}
-  - {fileID: 608364478}
-  - {fileID: 286280498}
-  - {fileID: 168142194}
-  - {fileID: 1763235223}
+  - {fileID: 327951585}
+  - {fileID: 1187218868}
+  - {fileID: 63698073}
+  - {fileID: 1040948484}
+  - {fileID: 1647189232}
+  - {fileID: 141007778}
   - {fileID: 1479941806}
   - {fileID: 1749566340}
   - {fileID: 1170888537}
@@ -26228,3 +27337,14 @@ SceneRoots:
   - {fileID: 1427854408}
   - {fileID: 183121140}
   - {fileID: 858285846}
+  - {fileID: 754733941}
+  - {fileID: 219063193}
+  - {fileID: 1124830983}
+  - {fileID: 718205226}
+  - {fileID: 252434150}
+  - {fileID: 2118243370}
+  - {fileID: 351118690}
+  - {fileID: 1673527048}
+  - {fileID: 1186367010}
+  - {fileID: 1699443668}
+  - {fileID: 725324753}

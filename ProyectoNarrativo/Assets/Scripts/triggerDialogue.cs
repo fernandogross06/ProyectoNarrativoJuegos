@@ -10,6 +10,8 @@ public class DialogueLine
     public Speaker speaker;
     [TextArea(2, 10)]
     public string text;
+    public bool disableAfterLine;
+    public bool enableBeforeLine;
 }
 
 public class triggerDialogue : MonoBehaviour
@@ -35,7 +37,7 @@ public class triggerDialogue : MonoBehaviour
     {
        
         dialogueBehaviour = dialogo.GetComponent<DialogueBehaviour>();
-        dialogueBehaviour.SetCaciquePosition(posicionActual);
+        //dialogueBehaviour.SetCaciquePosition(posicionActual);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -44,8 +46,10 @@ public class triggerDialogue : MonoBehaviour
         {
             if (isFirstEntry)
             {
-                print("sirve");
+                
                 isFirstEntry = false;
+
+                dialogueBehaviour.SetCaciquePosition(posicionActual);
 
                 if (detenerMovimiento)
                 {
@@ -66,19 +70,29 @@ public class triggerDialogue : MonoBehaviour
             switch (line.speaker)
             {
                 case DialogueLine.Speaker.Player:
-                    dialogueBehaviour.setDialoguePlayer(line.text);
+                    dialogueBehaviour.setDialoguePlayer(
+                        line.text,
+                        line.disableAfterLine,
+                        line.enableBeforeLine 
+                    );
                     break;
+
                 case DialogueLine.Speaker.Cacique:
-                    dialogueBehaviour.setDialogueCacique(line.text);
+                    dialogueBehaviour.setDialogueCacique(
+                        line.text,
+                        line.disableAfterLine,
+                        line.enableBeforeLine 
+                    );
                     break;
             }
         }
     }
+
 }
 
 
 
 
 
- 
+
 

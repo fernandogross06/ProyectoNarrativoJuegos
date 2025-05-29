@@ -6,6 +6,10 @@ TagManager:
   tags:
   - Spikes
   - InvisibleTile
+  - ZONA2
+  - ZONA3
+  - ZONA4
+  - ZONA5
   layers:
   - Default
   - TransparentFX

@@ -16,6 +16,7 @@ public class TextBehaviour : MonoBehaviour
     [SerializeField] private List<Sprite> dialogueSprites;
     [SerializeField] private float fadeDuration = 0.5f;
     [SerializeField] private float timeBetweenLines = 0.5f;
+    public string sceneName;
 
     public SceneController sceneController;
 
@@ -57,7 +58,7 @@ public class TextBehaviour : MonoBehaviour
             }
             else
             {
-                sceneController.loadScene("PlatformerLevelUpMechanic");
+                sceneController.loadScene(sceneName);
             }
         }
     }
