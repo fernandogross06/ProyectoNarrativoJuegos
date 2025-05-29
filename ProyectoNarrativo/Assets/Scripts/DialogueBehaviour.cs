@@ -39,7 +39,7 @@ public class DialogueBehaviour : MonoBehaviour
     public GameObject dialogGameObject;
     private Animator playerAnimator;
 
-
+    private DialogueEntry currentEntry;
 
     private Coroutine typingCoroutine;
     private bool isTyping = false;
@@ -53,34 +53,40 @@ public class DialogueBehaviour : MonoBehaviour
         playerAnimator = player.GetComponent<Animator>();
     }
 
+   
+
     private void Update()
     {
-        //descomentar si se quiere que se pasen los dialogos con espacio o alguna tecla
-        /*
         if (Input.GetKeyDown(KeyCode.Space) && dialogGameObject.activeSelf)
         {
             if (isTyping)
             {
+                // Terminar la escritura y mostrar el texto completo de la entrada actual
                 StopCoroutine(typingCoroutine);
-                dialogueText.text = currentDialogue.dialogueEntries[currentLineIndex].line;
+                dialogueText.text = currentEntry.line;
                 isTyping = false;
             }
             else
             {
-                currentLineIndex++;
-
-                if (currentLineIndex < currentDialogue.dialogueEntries.Count)
+                // Mostrar el siguiente diálogo de la cola si hay
+                if (dialogueQueue.Count > 0)
                 {
-                    var entry = currentDialogue.dialogueEntries[currentLineIndex];
-                    typingCoroutine = StartCoroutine(TypeDialog(entry.line, entry.character));
+                    DialogueEntry next = dialogueQueue.Dequeue();
+                    typingCoroutine = StartCoroutine(TypeDialog(next));
                 }
                 else
                 {
+                    // Si no hay más, ocultar el diálogo
                     dialogGameObject.SetActive(false);
+                    if (movement != null)
+                    {
+                        movement.enabled = true;
+                    }
                 }
             }
-        }*/
+        }
     }
+
 
     /*public void StartNextDialogue()
     {
@@ -105,11 +111,11 @@ public class DialogueBehaviour : MonoBehaviour
     private IEnumerator TypeDialog(DialogueEntry entry)
     {
         isTyping = true;
+        currentEntry = entry; 
         dialogueText.text = "";
 
         GameObject character = entry.character;
 
-        // 🔹 Activar antes de hablar si se indica
         if (entry.enableBeforeLine && character != null && !character.activeSelf)
         {
             character.SetActive(true);
@@ -128,29 +134,12 @@ public class DialogueBehaviour : MonoBehaviour
 
         isTyping = false;
 
-        // 🔹 Desactivar después de hablar si se indica
         if (entry.disableAfterLine && character != null)
         {
             character.SetActive(false);
         }
-
-        if (dialogueQueue.Count > 0)
-        {
-            yield return new WaitForSeconds(delayBetweenDialogues);
-
-            DialogueEntry next = dialogueQueue.Dequeue();
-            typingCoroutine = StartCoroutine(TypeDialog(next));
-        }
-        else
-        {
-            yield return new WaitForSeconds(delayBetweenDialogues);
-            dialogGameObject.SetActive(false);
-            if (movement != null)
-            {
-                movement.enabled = true;
-            }
-        }
     }
+
 
 
 
