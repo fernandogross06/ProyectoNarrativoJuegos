@@ -35,7 +35,7 @@ public class triggerDialogue : MonoBehaviour
     {
        
         dialogueBehaviour = dialogo.GetComponent<DialogueBehaviour>();
-        dialogueBehaviour.SetCaciquePosition(posicionActual);
+        //dialogueBehaviour.SetCaciquePosition(posicionActual);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -44,8 +44,10 @@ public class triggerDialogue : MonoBehaviour
         {
             if (isFirstEntry)
             {
-                print("sirve");
+                
                 isFirstEntry = false;
+
+                dialogueBehaviour.SetCaciquePosition(posicionActual);
 
                 if (detenerMovimiento)
                 {

@@ -35,9 +35,7 @@ public class DialogueBehaviour : MonoBehaviour
     public SpeechBubbleBehaviour speechBubble;
     public GameObject dialogGameObject;
 
-    private DialogueSet currentDialogue;
-    private int currentDialogueIndex = -1;
-    private int currentLineIndex = 0;
+  
 
     private Coroutine typingCoroutine;
     private bool isTyping = false;

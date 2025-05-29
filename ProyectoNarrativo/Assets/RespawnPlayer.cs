@@ -6,6 +6,7 @@ public class RespawnPlayer : MonoBehaviour
     public GameObject dialogo;
     private DialogueBehaviour dialogueBehaviour;
     public PlayerMovement player;
+    int respawnTimes = 0;
 
     void Start()
     {
@@ -40,6 +41,35 @@ public class RespawnPlayer : MonoBehaviour
         // Sound
         transform.position = spawnPoint.position;
         player.NextPlayerStats();
+        respawnTimes++;
+
+        if(respawnTimes == 1)
+        {
+            dialogueBehaviour.stopMovement();
+            dialogueBehaviour.setDialoguePlayer("¿Qué acaba de pasar?");
+            dialogueBehaviour.setDialogueCacique("Una de las particularidades de este mundo.");
+            dialogueBehaviour.setDialogueCacique("Ahora, intenta llegar a la isla por tu cuenta.");
+        }
+
+        if (respawnTimes == 2)
+        {
+            dialogueBehaviour.stopMovement();
+            dialogueBehaviour.setDialogueCacique("¿Ahora lo entiendes?");
+            dialogueBehaviour.setDialoguePlayer("¡Sí! ¡Es increíble! ¡A diferencia del mundo real,");
+            dialogueBehaviour.setDialoguePlayer("en este mundo aunque me equivoque puedo intentarlo de nuevo!");
+            dialogueBehaviour.setDialogueCacique("No exactamente, en el “mundo real” tamb-");
+            dialogueBehaviour.setDialogueCacique("*suspira*");
+            dialogueBehaviour.setDialogueCacique("Así es. En este mundo la voluntad es el único límite.");
+            dialogueBehaviour.setDialogueCacique("Puedes volver a intentar los desafíos a los que te enfrentes cuantas veces quieras.");
+            dialogueBehaviour.setDialoguePlayer("¡Increíble!");
+        }
+
+        if(respawnTimes == 3)
+        {
+            dialogueBehaviour.stopMovement();
+            dialogueBehaviour.setDialoguePlayer("¡Disculpe… este… ¿Señor? Creo que definitivamente no puedo llegar al otro lado.");
+            dialogueBehaviour.setDialogueCacique("No te rindas.");
+        }
 
 
     }
