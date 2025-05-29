@@ -6,11 +6,14 @@ using static UnityEngine.EventSystems.EventTrigger;
 
 
 [System.Serializable]
+
 public class DialogueEntry
 {
     public GameObject character;
     [TextArea]
     public string line;
+    public bool disableAfterLine;
+    public bool enableBeforeLine;
 }
 
 [System.Serializable]
@@ -34,8 +37,9 @@ public class DialogueBehaviour : MonoBehaviour
 
     public SpeechBubbleBehaviour speechBubble;
     public GameObject dialogGameObject;
+    private Animator playerAnimator;
 
-  
+
 
     private Coroutine typingCoroutine;
     private bool isTyping = false;
@@ -46,6 +50,7 @@ public class DialogueBehaviour : MonoBehaviour
     {
         dialogGameObject.SetActive(false);
         playerRb = player.GetComponent<Rigidbody2D>();
+        playerAnimator = player.GetComponent<Animator>();
     }
 
     private void Update()
@@ -97,17 +102,25 @@ public class DialogueBehaviour : MonoBehaviour
         typingCoroutine = StartCoroutine(TypeDialog(entry.line, entry.character));
     }*/
 
-    private IEnumerator TypeDialog(string dialog, GameObject character)
+    private IEnumerator TypeDialog(DialogueEntry entry)
     {
         isTyping = true;
         dialogueText.text = "";
+
+        GameObject character = entry.character;
+
+        // 🔹 Activar antes de hablar si se indica
+        if (entry.enableBeforeLine && character != null && !character.activeSelf)
+        {
+            character.SetActive(true);
+        }
 
         if (speechBubble != null && character != null)
         {
             speechBubble.SetCurrentSpeaker(character.transform);
         }
 
-        foreach (char letter in dialog.ToCharArray())
+        foreach (char letter in entry.line.ToCharArray())
         {
             dialogueText.text += letter;
             yield return new WaitForSeconds(1f / letterPerSeconds);
@@ -115,12 +128,18 @@ public class DialogueBehaviour : MonoBehaviour
 
         isTyping = false;
 
+        // 🔹 Desactivar después de hablar si se indica
+        if (entry.disableAfterLine && character != null)
+        {
+            character.SetActive(false);
+        }
+
         if (dialogueQueue.Count > 0)
         {
             yield return new WaitForSeconds(delayBetweenDialogues);
 
             DialogueEntry next = dialogueQueue.Dequeue();
-            typingCoroutine = StartCoroutine(TypeDialog(next.line, next.character));
+            typingCoroutine = StartCoroutine(TypeDialog(next));
         }
         else
         {
@@ -134,13 +153,16 @@ public class DialogueBehaviour : MonoBehaviour
     }
 
 
-    public void setDialoguePlayer(string line)
-    {
-        DialogueEntry entry = new DialogueEntry { character = player, line = line };
 
-       
-                
-        
+    public void setDialoguePlayer(string line, bool disableAfterLine = false, bool enableBeforeLine = false)
+    {
+        DialogueEntry entry = new DialogueEntry
+        {
+            character = player,
+            line = line,
+            disableAfterLine = disableAfterLine,
+            enableBeforeLine = enableBeforeLine
+        };
 
         if (isTyping)
         {
@@ -149,14 +171,19 @@ public class DialogueBehaviour : MonoBehaviour
         else
         {
             dialogGameObject.SetActive(true);
-            typingCoroutine = StartCoroutine(TypeDialog(entry.line, entry.character));
-            
+            typingCoroutine = StartCoroutine(TypeDialog(entry));
         }
     }
 
-    public void setDialogueCacique(string line)
+    public void setDialogueCacique(string line, bool disableAfterLine = false, bool enableBeforeLine = false)
     {
-        DialogueEntry entry = new DialogueEntry { character = cacique, line = line };
+        DialogueEntry entry = new DialogueEntry
+        {
+            character = cacique,
+            line = line,
+            disableAfterLine = disableAfterLine,
+            enableBeforeLine = enableBeforeLine
+        };
 
         if (isTyping)
         {
@@ -165,11 +192,12 @@ public class DialogueBehaviour : MonoBehaviour
         else
         {
             dialogGameObject.SetActive(true);
-            typingCoroutine = StartCoroutine(TypeDialog(entry.line, entry.character));
+            typingCoroutine = StartCoroutine(TypeDialog(entry));
         }
     }
 
-    
+
+
     public void stopMovement()
     {
         movement.enabled = false;
@@ -177,6 +205,14 @@ public class DialogueBehaviour : MonoBehaviour
         if (playerRb != null)
         {
             playerRb.linearVelocity = Vector2.zero;
+        }
+
+        if(playerAnimator != null){
+            // Supongamos que usás un parámetro float "Speed"
+            playerAnimator.SetFloat("Speed", 0f);
+         
+            // O si tenés un trigger "Idle"
+            // playerAnimator.SetTrigger("Idle");
         }
     }
 

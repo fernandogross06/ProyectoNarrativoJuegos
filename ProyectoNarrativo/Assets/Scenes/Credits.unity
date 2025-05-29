@@ -408,7 +408,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -469,8 +469,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -249}
-  m_SizeDelta: {x: 886.1375, y: 315.7296}
+  m_AnchoredPosition: {x: -0.00091553, y: -3.3989}
+  m_SizeDelta: {x: 886.14, y: 724.5275}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &574191565
 GameObject:
@@ -762,7 +762,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1410347207
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1006,21 +1006,7 @@ MonoBehaviour:
   arrowMoveDistance: 20
   arrowMoveSpeed: 1
   dialogueLines:
-  - "Este es Jos\xE9. Luego de ser despedido de su \xFAltimo trabajo encontr\xF3
-    un nuevo objetivo de vida: conseguir el rango oro en su videojuego competitivo
-    online favorito. "
-  - "Un d\xEDa, luego de una desmoralizante sesi\xF3n de juego en la que no vi\xF3
-    la victoria por culpa de sus malvados compa\xF1eros de equipo, Jos\xE9 decidi\xF3
-    ahogar sus penas de alguna manera."
-  - "Sin muchas ganas de levantarse de su silla, Jos\xE9 se\u2026 no se levant\xF3
-    de su silla, pero se di\xF3 cuenta que hab\xEDa una pachita a medio beber debajo
-    de su escritorio. "
-  - "Sin pensarlo dos veces, Jos\xE9 le sacudi\xF3 el polvo y las telas de ara\xF1a
-    como har\xEDa uno con cualquier botella de pl\xE1stico y se dispuso a beber un
-    gran trago. "
-  - "Como era de esperar, Jos\xE9 inmediatamente perdi\xF3 el conocimiento."
-  - "Como no era de esperar, \xBF\xA1Jos\xE9 se despert\xF3 dentro del mundo de un
-    videojuego!? "
+  - Desarrolladores\n\n  Richard Araya\n Kevin Carranza \n Fernando Gross\n
   dialogueSprites:
   - {fileID: -3159702885063150168, guid: 7cdf87693045900468538f0d04f84855, type: 3}
   - {fileID: 3834577162612744020, guid: 3f82f194e558b8e4ab7d88aaed85bbef, type: 3}
@@ -1030,7 +1016,7 @@ MonoBehaviour:
   - {fileID: 3834577162612744020, guid: 3f82f194e558b8e4ab7d88aaed85bbef, type: 3}
   fadeDuration: 0.5
   timeBetweenLines: 0.5
-  sceneName: PlatformerLevelUpMechanic
+  sceneName: MainMenu
   sceneController: {fileID: 1903773497}
 --- !u!4 &1882509461
 Transform:
