@@ -1877,7 +1877,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   respawnPlayer: {fileID: 1700261125}
-  respawnPoint: {fileID: 1684340891}
+  respawnPoint: {fileID: 223106915}
 --- !u!50 &533080025
 Rigidbody2D:
   serializedVersion: 5
@@ -6835,7 +6835,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!81 &1016736681
 AudioListener:
   m_ObjectHideFlags: 0
@@ -8118,7 +8118,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1274676999
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22954,7 +22954,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1573072128
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24157,7 +24157,7 @@ Transform:
   m_GameObject: {fileID: 1700261121}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 62.86, y: 38.63, z: 0}
+  m_LocalPosition: {x: -60.251, y: -14.16, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -24176,7 +24176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6e6e9d9a98ff324e8619f6d420caefc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPoint: {fileID: 1684340891}
+  spawnPoint: {fileID: 1197540155}
   dialogo: {fileID: 3210204843827676581}
   player: {fileID: 1700261128}
 --- !u!50 &1700261126
