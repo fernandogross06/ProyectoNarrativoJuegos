@@ -372,9 +372,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Este es Jos\xE9. Luego de ser despedido de su \xFAltimo trabajo encontr\xF3
-    un nuevo objetivo de vida: conseguir el rango oro en su videojuego competitivo
-    online favorito. "
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ac79b009fc9824a45a5e8e0d6997a78a, type: 2}
   m_sharedMaterial: {fileID: -8069898752568033381, guid: ac79b009fc9824a45a5e8e0d6997a78a, type: 2}
@@ -1010,7 +1008,7 @@ MonoBehaviour:
     nuevo objetivo de vida: conseguir el rango oro en su videojuego competitivo online
     favorito. "
   - "Un d\xEDa, luego de una desmoralizante sesi\xF3n de juego en la que no vi\xF3
-    la victoria por culpa de sus malvados compa\xF1eros de equipo, Jos\xE9 decidi\xF3
+    la victoria por culpa de sus malvados compa\xF1eros de equipo, Carlos decidi\xF3
     ahogar sus penas de alguna manera."
   - "Sin muchas ganas de levantarse de su silla, Carlos\u2026 no se levant\xF3 de
     su silla, pero se di\xF3 cuenta que hab\xEDa una pachita a medio beber debajo

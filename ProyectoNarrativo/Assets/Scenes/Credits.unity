@@ -372,9 +372,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Este es Jos\xE9. Luego de ser despedido de su \xFAltimo trabajo encontr\xF3
-    un nuevo objetivo de vida: conseguir el rango oro en su videojuego competitivo
-    online favorito. "
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ac79b009fc9824a45a5e8e0d6997a78a, type: 2}
   m_sharedMaterial: {fileID: -8069898752568033381, guid: ac79b009fc9824a45a5e8e0d6997a78a, type: 2}
@@ -1007,13 +1005,11 @@ MonoBehaviour:
   arrowMoveSpeed: 1
   dialogueLines:
   - Desarrolladores\n\n  Richard Araya\n Kevin Carranza \n Fernando Gross\n
-  dialogueSprites:
-  - {fileID: -3159702885063150168, guid: 7cdf87693045900468538f0d04f84855, type: 3}
-  - {fileID: 3834577162612744020, guid: 3f82f194e558b8e4ab7d88aaed85bbef, type: 3}
-  - {fileID: -3159702885063150168, guid: 7cdf87693045900468538f0d04f84855, type: 3}
-  - {fileID: 3834577162612744020, guid: 3f82f194e558b8e4ab7d88aaed85bbef, type: 3}
-  - {fileID: -3159702885063150168, guid: 7cdf87693045900468538f0d04f84855, type: 3}
-  - {fileID: 3834577162612744020, guid: 3f82f194e558b8e4ab7d88aaed85bbef, type: 3}
+  - Tema Principal\n\n  It takes a Hero\n Zane Little Music\n https://opengameart.org/content/it-takes-a-hero
+  - Tema Creditos\n\n  8 bit ooame lofi\n TAD\n https://opengameart.org/content/ooame
+  - Asset Personaje\n\n Green platformer Guy\n Mewily\n https://mewily.itch.io
+  - Tile Map\n\n  Free Pixel Art Grasslands Tileset\n unTied Games\n https://untiedgames.itch.io/free-grasslands-tileset
+  dialogueSprites: []
   fadeDuration: 0.5
   timeBetweenLines: 0.5
   sceneName: MainMenu

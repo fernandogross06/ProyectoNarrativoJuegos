@@ -603,7 +603,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 679565074}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1196137056}
+        m_TargetAssemblyTypeName: MainMenuScript, Assembly-CSharp
+        m_MethodName: credits
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &679565074
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1257,7 +1269,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Nombre del Juego
+  m_text: You can try again!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ac79b009fc9824a45a5e8e0d6997a78a, type: 2}
   m_sharedMaterial: {fileID: -8069898752568033381, guid: ac79b009fc9824a45a5e8e0d6997a78a, type: 2}

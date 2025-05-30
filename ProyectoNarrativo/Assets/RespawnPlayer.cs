@@ -191,7 +191,7 @@ public class RespawnPlayer : MonoBehaviour
             if (respawnTimesScene2 == 5)
             {
                 dialogueBehaviour.stopMovement();
-                dialogueBehaviour.setDialogueCacique("SEstoy seguro de que lo puedes hacer. Recuerda no dejar de avanzar mientras saltas.");
+                dialogueBehaviour.setDialogueCacique("Estoy seguro de que lo puedes hacer. Recuerda no dejar de avanzar mientras saltas.");
                 dialogueBehaviour.setDialoguePlayer("¡SÍ!");
 
             }
