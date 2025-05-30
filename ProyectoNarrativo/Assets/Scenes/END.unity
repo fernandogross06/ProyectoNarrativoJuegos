@@ -401,14 +401,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 56
-  m_fontSizeBase: 56
+  m_fontSize: 80
+  m_fontSizeBase: 80
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -469,8 +469,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -285}
-  m_SizeDelta: {x: 886.1375, y: 315.7296}
+  m_AnchoredPosition: {x: -0.00091553, y: -3.3989}
+  m_SizeDelta: {x: 886.14, y: 724.5275}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &574191565
 GameObject:
@@ -762,7 +762,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1410347207
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1006,25 +1006,11 @@ MonoBehaviour:
   arrowMoveDistance: 20
   arrowMoveSpeed: 1
   dialogueLines:
-  - "A pesar de las adversidades y enfrentarse al fracaso una y otra vez, Carlos
-    logr\xF3 superar el desaf\xEDo de las Islas Flotantes, consigui\xF3 el coraz\xF3n
-    de oro y logr\xF3 volver a casa. "
-  - "Reflexivo, contemplando la normalidad de su habitaci\xF3n luego de tal aventura,
-    Carlos se percat\xF3 que el calendario marcaba un d\xEDa despu\xE9s de la fecha
-    final de la temporada clasificatoria, efectivamente perdiendo el objetivo de
-    alcanzar su rango deseado. "
-  - "Sin tomarle mucha importancia, Carlos se detuvo un momento y tuvo un s\xF3lo
-    pensamiento: \u201CTal vez deber\xEDa empezar a buscar trabajo.\u201D "
-  - "Luego tuvo otro: \u201CTambi\xE9n ser\xEDa bueno limpiar el cuarto y no volver
-    a tomarme cosas que me encuentre en el piso.\u201D "
-  dialogueSprites:
-  - {fileID: -2537463961563579175, guid: 2d22825e0672cc946840ffa43f549c27, type: 3}
-  - {fileID: -7945928126988306733, guid: 8fc18e42aac123f418fe73bdf6d7f4d9, type: 3}
-  - {fileID: -8926855294587316939, guid: d047dd0418fe6234c87f7d7e259b8da6, type: 3}
-  - {fileID: -8926855294587316939, guid: d047dd0418fe6234c87f7d7e259b8da6, type: 3}
+  - \n\nFIN
+  dialogueSprites: []
   fadeDuration: 0.5
   timeBetweenLines: 0.5
-  sceneName: END
+  sceneName: Credits
   sceneController: {fileID: 1903773497}
 --- !u!4 &1882509461
 Transform:

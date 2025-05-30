@@ -1006,28 +1006,28 @@ MonoBehaviour:
   arrowMoveDistance: 20
   arrowMoveSpeed: 1
   dialogueLines:
-  - "Este es Jos\xE9. Luego de ser despedido de su \xFAltimo trabajo encontr\xF3
-    un nuevo objetivo de vida: conseguir el rango oro en su videojuego competitivo
-    online favorito. "
+  - "Este es Carlos. Luego de ser despedido de su \xFAltimo trabajo encontr\xF3 un
+    nuevo objetivo de vida: conseguir el rango oro en su videojuego competitivo online
+    favorito. "
   - "Un d\xEDa, luego de una desmoralizante sesi\xF3n de juego en la que no vi\xF3
     la victoria por culpa de sus malvados compa\xF1eros de equipo, Jos\xE9 decidi\xF3
     ahogar sus penas de alguna manera."
-  - "Sin muchas ganas de levantarse de su silla, Jos\xE9 se\u2026 no se levant\xF3
-    de su silla, pero se di\xF3 cuenta que hab\xEDa una pachita a medio beber debajo
+  - "Sin muchas ganas de levantarse de su silla, Carlos\u2026 no se levant\xF3 de
+    su silla, pero se di\xF3 cuenta que hab\xEDa una pachita a medio beber debajo
     de su escritorio. "
-  - "Sin pensarlo dos veces, Jos\xE9 le sacudi\xF3 el polvo y las telas de ara\xF1a
+  - "Sin pensarlo dos veces, Carlos le sacudi\xF3 el polvo y las telas de ara\xF1a
     como har\xEDa uno con cualquier botella de pl\xE1stico y se dispuso a beber un
     gran trago. "
-  - "Como era de esperar, Jos\xE9 inmediatamente perdi\xF3 el conocimiento."
-  - "Como no era de esperar, \xBF\xA1Jos\xE9 se despert\xF3 dentro del mundo de un
+  - "Como era de esperar, Carlos inmediatamente perdi\xF3 el conocimiento."
+  - "Como no era de esperar, \xBF\xA1Carlos se despert\xF3 dentro del mundo de un
     videojuego!? "
   dialogueSprites:
-  - {fileID: -3159702885063150168, guid: 7cdf87693045900468538f0d04f84855, type: 3}
-  - {fileID: 3834577162612744020, guid: 3f82f194e558b8e4ab7d88aaed85bbef, type: 3}
-  - {fileID: -3159702885063150168, guid: 7cdf87693045900468538f0d04f84855, type: 3}
-  - {fileID: 3834577162612744020, guid: 3f82f194e558b8e4ab7d88aaed85bbef, type: 3}
-  - {fileID: -3159702885063150168, guid: 7cdf87693045900468538f0d04f84855, type: 3}
-  - {fileID: 3834577162612744020, guid: 3f82f194e558b8e4ab7d88aaed85bbef, type: 3}
+  - {fileID: 21300000, guid: 114177ea5e6e7674093ce4168bc30821, type: 3}
+  - {fileID: 21300000, guid: a5d652d69d259c447acb8e7d4313ad9a, type: 3}
+  - {fileID: 21300000, guid: 46634285a820cf3468556bd29ebbfd95, type: 3}
+  - {fileID: 21300000, guid: 46634285a820cf3468556bd29ebbfd95, type: 3}
+  - {fileID: 21300000, guid: 741b3b50ea4a5cb4583dd58447c140f6, type: 3}
+  - {fileID: -5850036365806385723, guid: 3303bbae646507349a282e18ff57ae31, type: 3}
   fadeDuration: 0.5
   timeBetweenLines: 0.5
   sceneName: PlatformerLevelUpMechanic
