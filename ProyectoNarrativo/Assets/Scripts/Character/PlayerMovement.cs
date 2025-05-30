@@ -31,6 +31,7 @@ public class PlayerMovement : MonoBehaviour
     public PlayerData LongJumpStats;
 
     public List<PlayerData> PlayerStats = new List<PlayerData>();
+	public int maxStats = 5; // 11
 	int stats_index = 0;
 
     #region GUI
@@ -118,7 +119,7 @@ public class PlayerMovement : MonoBehaviour
 		animator.SetFloat("Speed", Mathf.Abs(_moveInput.x));
 		if (_moveInput.x != 0)
 			CheckDirectionToFace(_moveInput.x > 0);
-
+		/*
         if (Input.GetKeyDown(KeyCode.Alpha2) )
         {
 			if (PlayerStats.Count > 0)
@@ -138,7 +139,7 @@ public class PlayerMovement : MonoBehaviour
                 CurrentStats = PlayerStats[stats_index];
             }
         }
-
+		*/
         if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.C) || Input.GetKeyDown(KeyCode.J))
         {
 			OnJumpInput();
@@ -491,9 +492,10 @@ public class PlayerMovement : MonoBehaviour
 	}
     public void NextPlayerStats()
     {
-		if (PlayerStats.Count > 0 & stats_index < (PlayerStats.Count - 1)) { 
+		Debug.Log("Count: " + PlayerStats.Count + "stats_index: " + stats_index + "maxStats: " + maxStats);
+		if ((PlayerStats.Count > 0) & (stats_index < (PlayerStats.Count - 1)) & (stats_index <= maxStats)){
 
-			stats_index = (stats_index + 1);
+            stats_index = (stats_index + 1);
             stats_text.text = stats_index.ToString();
             CurrentStats = PlayerStats[stats_index];
         }

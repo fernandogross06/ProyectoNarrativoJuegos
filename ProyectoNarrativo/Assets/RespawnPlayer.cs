@@ -63,6 +63,7 @@ public class RespawnPlayer : MonoBehaviour
 
     void Update()
     {
+        /*
         if (Input.GetKeyDown(KeyCode.F))
         {
             transform.position = spawnPoint.position;
@@ -74,7 +75,7 @@ public class RespawnPlayer : MonoBehaviour
             dialogueBehaviour.setDialoguePlayer("Vamos equipo, salimos jugando");
             dialogueBehaviour.setDialoguePlayer("Ball up top");
         }
-
+        */
         if (Input.GetKeyDown(KeyCode.R))
         {
             transform.position = spawnPoint.position;
