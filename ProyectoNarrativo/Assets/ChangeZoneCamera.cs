@@ -5,7 +5,7 @@ public class ChangeZoneCamera : MonoBehaviour
 {
     public Transform targetPosition;
     public float targetSize = 5f;
-    public DamageZone damageZone;
+    //public DamageZone damageZone;
     public Transform respawnPoint;
     public bool isFirstEntry = true;
   
@@ -24,12 +24,15 @@ public class ChangeZoneCamera : MonoBehaviour
             if (isFirstEntry)
             {
                 isFirstEntry = false;
-
+                if (respawnPoint != null)
+                {
+                    zones.spawnPoint = respawnPoint;
+                }
                 // Acá llama al dialogo si lo tiene
                 // if HAY DIALOGOS
                 // ENCOLAR DIALOGOS
-              
-                if(gameObject.CompareTag("ZONA2"))
+
+                if (gameObject.CompareTag("ZONA2"))
                 {
                     zones.scene1 = false;
                     zones.scene2 = true;
@@ -54,9 +57,9 @@ public class ChangeZoneCamera : MonoBehaviour
 
             }
             CameraManager.Instance.MoveTo(targetPosition.position, targetSize);
-            if(respawnPoint != null) { 
-            damageZone.respawnPoint = respawnPoint;
-            }
+            //if(respawnPoint != null) { 
+            //damageZone.respawnPoint = respawnPoint;
+            //}
         }
     }
 }
