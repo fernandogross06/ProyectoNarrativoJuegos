@@ -1,0 +1,689 @@
+fileFormatVersion: 2
+guid: bbc0984cbbe9df74484e9234c039381c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7801152828262196364
+    second: Instrucciones3_0
+  - first:
+      213: -4597782436613396877
+    second: Instrucciones3_1
+  - first:
+      213: 7062719828773308617
+    second: Instrucciones3_2
+  - first:
+      213: -7030855720391352321
+    second: Instrucciones3_3
+  - first:
+      213: -8926636296321194432
+    second: Instrucciones3_4
+  - first:
+      213: 5316343760486854350
+    second: Instrucciones3_5
+  - first:
+      213: 3179317429777877709
+    second: Instrucciones3_6
+  - first:
+      213: 8577036773251713067
+    second: Instrucciones3_7
+  - first:
+      213: 3669371566146818602
+    second: Instrucciones3_8
+  - first:
+      213: -5077696753316216347
+    second: Instrucciones3_9
+  - first:
+      213: -1288886573682017302
+    second: Instrucciones3_10
+  - first:
+      213: -1013518928699786988
+    second: Instrucciones3_11
+  - first:
+      213: -7561903082803798199
+    second: Instrucciones3_12
+  - first:
+      213: -7703947914559274963
+    second: Instrucciones3_13
+  - first:
+      213: 7591219540472637872
+    second: Instrucciones3_14
+  - first:
+      213: -3722491634966046585
+    second: Instrucciones3_15
+  - first:
+      213: -1255636043141778031
+    second: Instrucciones3_16
+  - first:
+      213: 8307500141433251518
+    second: Instrucciones3_17
+  - first:
+      213: 6135878595837438535
+    second: Instrucciones3_18
+  - first:
+      213: 2810710436183053060
+    second: Instrucciones3_19
+  - first:
+      213: 8378486369147357323
+    second: Instrucciones3_20
+  - first:
+      213: 4434098831392600367
+    second: Instrucciones3_21
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 50
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Instrucciones3_0
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 189
+        width: 26
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c842a1f3a23434c60800000000000000
+      internalID: 7801152828262196364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Instrucciones3_1
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 185
+        width: 21
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 376e027eb356130c0800000000000000
+      internalID: -4597782436613396877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Instrucciones3_2
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 168
+        width: 26
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c8042ea342d30260800000000000000
+      internalID: 7062719828773308617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Instrucciones3_3
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 179
+        width: 20
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fffdc0f29f16d6e90800000000000000
+      internalID: -7030855720391352321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Instrucciones3_4
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 182
+        width: 22
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 046aaa675973e1480800000000000000
+      internalID: -8926636296321194432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Instrucciones3_5
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 177
+        width: 24
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eceeea3ab7277c940800000000000000
+      internalID: 5316343760486854350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Instrucciones3_6
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 174
+        width: 10
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dca4e1e8b543f1c20800000000000000
+      internalID: 3179317429777877709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Instrucciones3_7
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 143
+        width: 24
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b28812f8081c70770800000000000000
+      internalID: 8577036773251713067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Instrucciones3_8
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 143
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a22991d8ff93ce230800000000000000
+      internalID: 3669371566146818602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Instrucciones3_9
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 142
+        width: 17
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e1ce65a4b56889b0800000000000000
+      internalID: -5077696753316216347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Instrucciones3_10
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 139
+        width: 21
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aebb9e37d74fc1ee0800000000000000
+      internalID: -1288886573682017302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Instrucciones3_11
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 106
+        width: 9
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 419f6b977e14fe1f0800000000000000
+      internalID: -1013518928699786988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Instrucciones3_12
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 102
+        width: 56
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94f5c8bf539be0790800000000000000
+      internalID: -7561903082803798199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Instrucciones3_13
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 0
+        width: 79
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2045906034161590800000000000000
+      internalID: -7703947914559274963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Instrucciones3_14
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 26
+        width: 106
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b920e9b3fd695960800000000000000
+      internalID: 7591219540472637872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Instrucciones3_15
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 11
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7885c72a49d075cc0800000000000000
+      internalID: -3722491634966046585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Instrucciones3_16
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 11
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1957b51eba5139ee0800000000000000
+      internalID: -1255636043141778031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Instrucciones3_17
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 11
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb6e2a51d5b2a4370800000000000000
+      internalID: 8307500141433251518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Instrucciones3_18
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 4
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74a20d9d215072550800000000000000
+      internalID: 6135878595837438535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Instrucciones3_19
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 3
+        width: 12
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4039c2bff36a10720800000000000000
+      internalID: 2810710436183053060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Instrucciones3_20
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 2
+        width: 6
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b880b7c26fc564470800000000000000
+      internalID: 8378486369147357323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Instrucciones3_21
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 13
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f217120f465198d30800000000000000
+      internalID: 4434098831392600367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Instrucciones3_0: 7801152828262196364
+      Instrucciones3_1: -4597782436613396877
+      Instrucciones3_10: -1288886573682017302
+      Instrucciones3_11: -1013518928699786988
+      Instrucciones3_12: -7561903082803798199
+      Instrucciones3_13: -7703947914559274963
+      Instrucciones3_14: 7591219540472637872
+      Instrucciones3_15: -3722491634966046585
+      Instrucciones3_16: -1255636043141778031
+      Instrucciones3_17: 8307500141433251518
+      Instrucciones3_18: 6135878595837438535
+      Instrucciones3_19: 2810710436183053060
+      Instrucciones3_2: 7062719828773308617
+      Instrucciones3_20: 8378486369147357323
+      Instrucciones3_21: 4434098831392600367
+      Instrucciones3_3: -7030855720391352321
+      Instrucciones3_4: -8926636296321194432
+      Instrucciones3_5: 5316343760486854350
+      Instrucciones3_6: 3179317429777877709
+      Instrucciones3_7: 8577036773251713067
+      Instrucciones3_8: 3669371566146818602
+      Instrucciones3_9: -5077696753316216347
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

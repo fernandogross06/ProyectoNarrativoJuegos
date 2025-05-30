@@ -16,6 +16,11 @@ public class RespawnPlayer : MonoBehaviour
     public bool scene3 = false;
     public bool scene4 = false;
     public bool scene5 = false;
+
+
+    public AudioSource audioSource;
+    public AudioClip respawnClip;
+    public int maxLevel;
     private List<string> frasesAleatorias = new List<string>
     {
     "No te rindas.",
@@ -53,6 +58,7 @@ public class RespawnPlayer : MonoBehaviour
     void Start()
     {
         dialogueBehaviour = dialogo.GetComponent<DialogueBehaviour>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -82,6 +88,7 @@ public class RespawnPlayer : MonoBehaviour
         // Animation Pop()
         // Sound
         transform.position = spawnPoint.position;
+        audioSource.PlayOneShot(respawnClip, 1);
         player.NextPlayerStats();
         
 

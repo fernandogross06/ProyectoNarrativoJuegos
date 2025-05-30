@@ -45,7 +45,11 @@ public class DialogueBehaviour : MonoBehaviour
     private bool isTyping = false;
 
     public PlayerMovement movement;
-
+    public bool tutorialInProgress;
+    public bool showInstructions;
+    public bool throwPlayer;
+    public NPCRush npc;
+    public tutorialDialogue tutorialDialogue;
     void Start()
     {
         dialogGameObject.SetActive(false);
@@ -65,6 +69,13 @@ public class DialogueBehaviour : MonoBehaviour
                 StopCoroutine(typingCoroutine);
                 dialogueText.text = currentEntry.line;
                 isTyping = false;
+
+                // Quitar si no funciona :)
+                if (currentEntry.disableAfterLine && currentEntry.character != null)
+                {
+                    currentEntry.character.SetActive(false);
+                }
+
             }
             else
             {
@@ -80,7 +91,36 @@ public class DialogueBehaviour : MonoBehaviour
                     dialogGameObject.SetActive(false);
                     if (movement != null)
                     {
-                        movement.enabled = true;
+                        if (tutorialInProgress)
+                        {
+                            // Llamar función que espera tiempo Corrutina y luego ejecuta el dialogo
+
+                            tutorialDialogue.TutorialSequence();
+                            tutorialInProgress = false;
+                            showInstructions = true;
+
+                        }
+                        else if(showInstructions)
+                        {
+                            tutorialDialogue.MostrarTextoTutorial();
+                            showInstructions = false;
+                            movement.enabled = true;
+                            throwPlayer = true;
+                        }
+                        else if (throwPlayer)
+                        {
+                            //tutorialDialogue.MostrarTextoTutorial();
+                            npc.StartRush();
+                            throwPlayer = false;
+                            
+                        }
+                        else {
+                            
+                            movement.enabled = true;
+
+                        }
+
+
                     }
                 }
             }
