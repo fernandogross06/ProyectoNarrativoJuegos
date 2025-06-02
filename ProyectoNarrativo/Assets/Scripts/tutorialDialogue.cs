@@ -64,7 +64,7 @@ public class tutorialDialogue : MonoBehaviour
         //animator.SetBool("IsSliding", false);
         //movement.enabled = false;
         //rb.bodyType = RigidbodyType2D.Static;
-        yield return new WaitForSeconds(4);
+        yield return new WaitForSeconds(3.5f);
 
         EnqueueDialogueLines();
 

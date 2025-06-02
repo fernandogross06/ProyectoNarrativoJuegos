@@ -109,13 +109,15 @@ public class DialogueBehaviour : MonoBehaviour
                         }
                         else if (throwPlayer)
                         {
-                            //tutorialDialogue.MostrarTextoTutorial();
+                            //tutorialDialogue.MostrarTextoTutorial
+                            //movement.enabled = true;
+                            stopMovement();
                             npc.StartRush();
                             throwPlayer = false;
                             
                         }
                         else {
-                            
+                            movement.IsInputEnabled = true;
                             movement.enabled = true;
 
                         }

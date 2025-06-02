@@ -108,8 +108,7 @@ public class RespawnPlayer : MonoBehaviour
             {
                 dialogueBehaviour.stopMovement();
                 dialogueBehaviour.setDialogueCacique("¿Ahora lo entiendes?");
-                dialogueBehaviour.setDialoguePlayer("¡Sí! ¡Es increíble! ¡A diferencia del mundo real,");
-                dialogueBehaviour.setDialoguePlayer("en este mundo aunque me equivoque puedo intentarlo de nuevo!");
+                dialogueBehaviour.setDialoguePlayer("¡Sí! ¡Es increíble! ¡A diferencia del mundo real en este mundo aunque me equivoque puedo intentarlo de nuevo!");
                 dialogueBehaviour.setDialogueCacique("No exactamente, en el “mundo real” tamb-");
                 dialogueBehaviour.setDialogueCacique("*suspira*");
                 dialogueBehaviour.setDialogueCacique("Así es. En este mundo la voluntad es el único límite.");

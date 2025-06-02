@@ -42,12 +42,12 @@ public class PlayerMovement : MonoBehaviour
     #region Variables
     //Components
     public Rigidbody2D RB { get; private set; }
-
-	//Variables control the various actions the player can perform at any time.
-	//These are fields which can are public allowing for other sctipts to read them
-	//but can only be privately written to.
-	public bool IsFacingRight { get; private set; }
-	public bool IsJumping { get; private set; }
+    public bool IsInputEnabled { get; set; }
+    //Variables control the various actions the player can perform at any time.
+    //These are fields which can are public allowing for other sctipts to read them
+    //but can only be privately written to.
+    public bool IsFacingRight { get; private set; }
+	public bool IsJumping { get; set; }
 	public bool IsWallJumping { get; private set; }
 	public bool IsSliding { get; private set; }
 
@@ -97,6 +97,7 @@ public class PlayerMovement : MonoBehaviour
 	{
 		SetGravityScale(CurrentStats.gravityScale);
 		IsFacingRight = true;
+		IsInputEnabled = true;
         stats_text.text = stats_index.ToString();
 		//CurrentStats = StartingStats;
     }
@@ -112,6 +113,7 @@ public class PlayerMovement : MonoBehaviour
 		LastPressedJumpTime -= Time.deltaTime;
 		#endregion
 
+		if(IsInputEnabled) { 
 		#region INPUT HANDLER
 		_moveInput.x = Input.GetAxisRaw("Horizontal");
 		_moveInput.y = Input.GetAxisRaw("Vertical");
@@ -140,6 +142,7 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 		*/
+
         if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.C) || Input.GetKeyDown(KeyCode.J))
         {
 			OnJumpInput();
@@ -149,8 +152,8 @@ public class PlayerMovement : MonoBehaviour
             OnJumpUpInput();
         }
 
-        #endregion
-
+            #endregion
+        }
         #region COLLISION CHECKS
         if (!IsJumping)
 		{
