@@ -45,6 +45,7 @@ public class DialogueBehaviour : MonoBehaviour
     private bool isTyping = false;
 
     public PlayerMovement movement;
+    public RespawnPlayer respawn;
     public bool tutorialInProgress;
     public bool showInstructions;
     public bool throwPlayer;
@@ -111,10 +112,16 @@ public class DialogueBehaviour : MonoBehaviour
                         {
                             //tutorialDialogue.MostrarTextoTutorial
                             //movement.enabled = true;
-                            stopMovement();
+                            //stopMovement();
+                            //movement.IsInputEnabled = false;
+                            movement.enabled = false;
                             npc.StartRush();
                             throwPlayer = false;
                             
+                        }
+                        else if (!throwPlayer && respawn.respawnTimesScene1 == 0)
+                        {
+                            Debug.Log("Blocking movement for this frame");
                         }
                         else {
                             movement.IsInputEnabled = true;
@@ -231,12 +238,12 @@ public class DialogueBehaviour : MonoBehaviour
 
     public void stopMovement()
     {
-        movement.enabled = false;
 
         if (playerRb != null)
         {
             playerRb.linearVelocity = Vector2.zero;
         }
+        movement.enabled = false;
 
         if(playerAnimator != null){
             // Supongamos que usás un parámetro float "Speed"

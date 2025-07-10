@@ -7,7 +7,7 @@ public class RespawnPlayer : MonoBehaviour
     public GameObject dialogo;
     private DialogueBehaviour dialogueBehaviour;
     public PlayerMovement player;
-    int respawnTimesScene1 = 0;
+    public int respawnTimesScene1 = 0;
     int respawnTimesScene2 = 0;
     int respawnTimesScene4 = 0;
     
@@ -89,6 +89,7 @@ public class RespawnPlayer : MonoBehaviour
         // Animation Pop()
         // Sound
         transform.position = spawnPoint.position;
+        player.IsJumping = false;
         audioSource.PlayOneShot(respawnClip, 1);
         player.NextPlayerStats();
         

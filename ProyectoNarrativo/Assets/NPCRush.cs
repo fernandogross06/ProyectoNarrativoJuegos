@@ -11,7 +11,7 @@ public class NPCRush : MonoBehaviour
     public float overshootDistance = 2f;    // Distance past the player
     public float overshootDuration = 0.3f;
 
-    private bool hasRushed = false;
+    public bool hasRushed = false;
     public SpriteRenderer caciqueOriginal;
 
     public void Start()
@@ -34,7 +34,8 @@ public class NPCRush : MonoBehaviour
             GetComponent<BoxCollider2D>().enabled = true;
             GetComponent<SpriteRenderer>().enabled = true;
             caciqueOriginal.enabled = false;
-            hasRushed = true;
+            playerMovement.enabled = false;
+            
             //playerMovement.IsInputEnabled = false;
             StartCoroutine(RushAndOvershoot());
 
@@ -42,6 +43,15 @@ public class NPCRush : MonoBehaviour
 
     IEnumerator RushAndOvershoot()
     {
+
+        float elapsed_start = 0f;
+
+        while (elapsed_start < 0.3f)
+        {
+            elapsed_start += Time.deltaTime;
+            yield return null;
+        }
+
         // Phase 1: Rush to player
         Vector3 startPos = transform.position;
         Vector3 playerPos = player.position;
@@ -75,6 +85,7 @@ public class NPCRush : MonoBehaviour
 
         GetComponent<SpriteRenderer>().enabled = false;
         caciqueOriginal.enabled = true;
+        hasRushed = true;
         // Done — you can trigger the next cutscene step here
     }
 }

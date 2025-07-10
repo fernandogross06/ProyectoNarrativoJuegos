@@ -47,7 +47,7 @@ public class PlayerMovement : MonoBehaviour
     //These are fields which can are public allowing for other sctipts to read them
     //but can only be privately written to.
     public bool IsFacingRight { get; private set; }
-	public bool IsJumping { get; set; }
+	
 	public bool IsWallJumping { get; private set; }
 	public bool IsSliding { get; private set; }
 
@@ -69,7 +69,11 @@ public class PlayerMovement : MonoBehaviour
 	public float LastPressedJumpTime { get; private set; }
 
 	//Set all of these up in the inspector
-	[Header("Checks")] 
+
+	[Header("Debug")]
+	[SerializeField] public bool IsJumping; //{ get; set; }
+
+    [Header("Checks")] 
 	[SerializeField] private Transform _groundCheckPoint;
 	//Size of groundCheck depends on the size of your character generally you want them slightly small than width (for ground) and height (for the wall check)
 	[SerializeField] private Vector2 _groundCheckSize = new Vector2(0.49f, 0.03f);
@@ -146,11 +150,13 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.C) || Input.GetKeyDown(KeyCode.J))
         {
 			OnJumpInput();
+			Debug.Log("salto 1");
         }
         if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.C) || Input.GetKeyDown(KeyCode.J))
         {
             OnJumpUpInput();
-        }
+            Debug.Log("salto 2");
+            }
 
             #endregion
         }
